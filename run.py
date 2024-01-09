@@ -82,3 +82,33 @@ forest_troll = Monster('Forest Troll', 'a creature taller than the average human
 basilisk = Monster('Basilisk', 'a serpentine creature with shimmering scales of iridescent hues, its piercing gaze freezing the air around it, a forked tongue flickering as it hisses, emanating an aura of petrifying danger', 5)
 wyvern = Monster('Wyvern', 'a formidable winged creature with scaled skin shimmering in the dim light, razor-sharp talons gripping the cave floor as its leathery wings fold against its sleek body, keen eyes fixated on the intruder with a calculated intensity, ready to take flight at the slightest provocation', 5)
 
+
+def dice_roll(player, monster):
+    """
+    Battle the monster by rolling the dice.
+    """
+    print(f'Lets [roll] the dice and kill the {monster.name}')
+
+    while True:
+        roll = input('>')
+        if roll == 'roll':
+            player_damage = random.randint(1, 6)
+            monster_damage = random.randint(1, 6)
+
+            # Deduct damage from monster's and player's health points
+            monster.hp -= player_damage
+            player.hp -= monster_damage
+
+            print(f"Player dealt {player_damage} damage. Monster's remaining HP: {monster.hp}")
+            print(f"Monster dealt {monster_damage} damage. Player's remaining HP: {player.hp}")
+
+            if monster.hp <= 0 or player.hp <= 0:
+                break
+
+    if monster.hp <= 0:
+        print(f"The {monster.name} is dead!")
+    elif player.hp <= 0:
+        print(f"{player.name} has been defeated!")
+
+
+
