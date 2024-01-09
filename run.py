@@ -73,7 +73,7 @@ class Monster():
         self.hp = hp
 
 
-goblin = Monster('Goblin', 'its wiry frame draped in tattered garments, with a crooked grin revealing jagged teeth and eyes gleaming with a mischievous glint', 5)
+goblin = Monster('Goblin', "a monster. It's wiry frame draped in tattered garments, with a crooked grin revealing jagged teeth and eyes gleaming with a mischievous glint", 5)
 ork = Monster('Ork', 'a towering and brutishly built shape, its grizzled body marked with scars', 7)
 murloc = Monster('Murloc', 'a small, amphibious creature with webbed appendages, emitting gurgling sounds', 5)
 cave_troll = Monster('Cave Troll', 'a hulking figure draped in crude hides, its massive frame adorned with tangled mossy hair and thick, gnarled limbs clutching a stone club, its eyes glowing with a primal, fierce intensity', 5)
@@ -130,9 +130,15 @@ def path_one():
             if choice_one == 'left':
                 print(f"You enter a dank cave with a puddle and you see {murloc.description} it's an {murloc.name}!")
                 dice_roll(player, murloc)
+                if player.hp >= 0:
+                    print('You survived the encountor!\n')
+                    print('Now you stand before a choice again will you go [left] or [right]?')
             elif choice_one == 'right':
                 print(f"You enter a new cave and you see {goblin.description} it's an {goblin.name}!")
                 dice_roll(player, goblin)
+                if player.hp >= 0:
+                    print('You survived the encountor!\n')
+                    print('Now you stand before a choice again will you go [left] or [right]?')
             else:
                 print('Invalid choice. Choose [left] or [right].')
 
