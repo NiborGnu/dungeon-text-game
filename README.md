@@ -42,4 +42,8 @@ BUGGS
 1. Bugg: function difficulty did not work
     Solved: "()" after lower in the input line: "input('>').lower"()""
 
-2. 
+2. Bugg: game did not find player value
+    Solved: moved player_name = get_player_name()
+            player_hp = difficulty()
+            player = Player(player_name, player_hp)
+            out of game function

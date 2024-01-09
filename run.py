@@ -5,7 +5,7 @@
 # Made By Robin Ung 
 
 import random
-import time
+import time # Add a timer function and a scoreboard
 
 
 def game():
