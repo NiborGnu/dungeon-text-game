@@ -122,6 +122,20 @@ def dice_roll(player, monster):
 def path_one():
     print(f"You enter a cave and you see {ork.description} it's an {ork.name}!")
     dice_roll(player, ork)
+    if player.hp >= 0:
+        print('You survived the encountor!\n')
+        print('Now you stand before a choice again will you go [left] or [right]?')
+        while True:
+            choice_one = input('>').lower()
+            if choice_one == 'left':
+                print(f"You enter a dank cave with a puddle and you see {murloc.description} it's an {murloc.name}!")
+                dice_roll(player, murloc)
+            elif choice_one == 'right':
+                print(f"You enter a new cave and you see {goblin.description} it's an {goblin.name}!")
+                dice_roll(player, goblin)
+            else:
+                print('Invalid choice. Choose [left] or [right].')
+
 
 
 player_name = get_player_name()
