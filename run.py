@@ -8,6 +8,11 @@ import random
 import time
 
 
+def game():
+    print(f'Hail {player.name} good to meet you!')
+    path_one()
+
+
 # Player 
 class Player():
     """
@@ -57,12 +62,6 @@ def difficulty():
         return difficulty()
 
 
-# Player 
-player_name = get_player_name()
-player_hp = difficulty()
-player = Player(player_name, player_hp)
-
-
 # Monsters
 class Monster():
     """
@@ -75,7 +74,7 @@ class Monster():
 
 
 goblin = Monster('Goblin', 'its wiry frame draped in tattered garments, with a crooked grin revealing jagged teeth and eyes gleaming with a mischievous glint', 5)
-ork = Monster('Ork', 'a towering and brutishly built, its grizzled body marked with scars', 5)
+ork = Monster('Ork', 'a towering and brutishly built shape, its grizzled body marked with scars', 7)
 murloc = Monster('Murloc', 'a small, amphibious creature with webbed appendages, emitting gurgling sounds', 5)
 cave_troll = Monster('Cave Troll', 'a hulking figure draped in crude hides, its massive frame adorned with tangled mossy hair and thick, gnarled limbs clutching a stone club, its eyes glowing with a primal, fierce intensity', 5)
 forest_troll = Monster('Forest Troll', 'a creature taller than the average human, its rugged, bark-like skin', 5)
@@ -87,11 +86,11 @@ def dice_roll(player, monster):
     """
     Battle the monster by rolling the dice.
     """
-    print(f'Lets [roll] the dice and kill the {monster.name}')
+    print(f'Lets [roll] the dice and kill the {monster.name}, or to end the game type [quit]')
 
     while True:
-        roll = input('>')
-        if roll == 'roll':
+        roll_quit = input('>').lower()
+        if roll_quit == 'roll':
             player_damage = random.randint(1, 6)
             monster_damage = random.randint(1, 6)
 
@@ -99,11 +98,20 @@ def dice_roll(player, monster):
             monster.hp -= player_damage
             player.hp -= monster_damage
 
-            print(f"Player dealt {player_damage} damage. Monster's remaining HP: {monster.hp}")
-            print(f"Monster dealt {monster_damage} damage. Player's remaining HP: {player.hp}")
+            print(f"{player.name} dealt {player_damage} damage. {monster.name}'s remaining HP: {monster.hp}")
+            print(f"{monster.name} dealt {monster_damage} damage. {player.name}'s remaining HP: {player.hp}")
+            
 
-            if monster.hp <= 0 or player.hp <= 0:
+            if monster.hp >= 1:
+                print(f'The {monster.name} still moves lets [roll] again!')
+            elif monster.hp <= 1 or player.hp <= 1:
                 break
+        elif roll_quit == 'quit':
+            print('Sad to see you go warrior! Come back and fight the dungeon again one day!')
+            # Add a way to restart game here!
+        else:
+            print('Invalid input!')
+            print('Type [roll] to attack or [quit] to end game')
 
     if monster.hp <= 0:
         print(f"The {monster.name} is dead!")
@@ -111,4 +119,12 @@ def dice_roll(player, monster):
         print(f"{player.name} has been defeated!")
 
 
+def path_one():
+    print(f"You enter a cave and you see {ork.description} it's an {ork.name}!")
+    dice_roll(player, ork)
 
+
+player_name = get_player_name()
+player_hp = difficulty()
+player = Player(player_name, player_hp)
+game()
