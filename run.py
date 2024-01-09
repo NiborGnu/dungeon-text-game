@@ -15,37 +15,32 @@ def game():
 
 # Player 
 class Player():
-    """
-    Player setup
-    """
+    """ Player setup """
     def __init__(self, name, hp):
         self.name = name
         self.hp = hp
 
 
 def get_player_name():
-    """
-    Get player name
-    """
+    """ Get player name """
     print('Hail warrior! State your name: \n')
     while True:
         player_name = input('>')
         if len(player_name) <= 20:
             return player_name
         else:
-            print("I don't have room on my paper for that long a name!\n")
-            print('Do you have a nickname i can call you?\n')
+            print(f"""I don't have room on my paper for that long a name!\n 
+Do you have a nickname i can call you?\n""")
 
 
 # Difficulty
 def difficulty():
-    """
-    Choose difficulty between easy, normal or hard
-    """
-    print('What difficulty do you crave warrior?\n')
-    print('[Easy] - 100hp\n')
-    print('[Normal] - 50hp\n')
-    print('[Hard] - 25hp\n')
+    """ Choose difficulty between easy, normal or hard """
+    print(f"""
+What difficulty do you crave warrior?\n
+[Easy] - 100hp\n
+[Normal] - 50hp\n
+[Hard] - 25hp\n""")
     diff = input('>').lower()
 
     if diff == 'easy':
@@ -73,20 +68,62 @@ class Monster():
         self.hp = hp
 
 
-goblin = Monster('Goblin', "a monster. It's wiry frame draped in tattered garments, with a crooked grin revealing jagged teeth and eyes gleaming with a mischievous glint", 5)
-ork = Monster('Ork', 'a towering and brutishly built shape, its grizzled body marked with scars', 7)
-murloc = Monster('Murloc', 'a small, amphibious creature with webbed appendages, emitting gurgling sounds', 5)
-cave_troll = Monster('Cave Troll', 'a hulking figure draped in crude hides, its massive frame adorned with tangled mossy hair and thick, gnarled limbs clutching a stone club, its eyes glowing with a primal, fierce intensity', 5)
-forest_troll = Monster('Forest Troll', 'a creature taller than the average human, its rugged, bark-like skin', 5)
-basilisk = Monster('Basilisk', 'a serpentine creature with shimmering scales of iridescent hues, its piercing gaze freezing the air around it, a forked tongue flickering as it hisses, emanating an aura of petrifying danger', 5)
-wyvern = Monster('Wyvern', 'a formidable winged creature with scaled skin shimmering in the dim light, razor-sharp talons gripping the cave floor as its leathery wings fold against its sleek body, keen eyes fixated on the intruder with a calculated intensity, ready to take flight at the slightest provocation', 5)
+goblin = Monster(
+    'Goblin',
+    f"""
+a monster. It's wiry frame draped in tattered garments, with a crooked grin
+revealing jagged teeth and eyes gleaming with a mischievous glint""",
+    5
+)
+ork = Monster(
+    'Ork',
+    'a towering and brutishly built shape, its grizzled body marked with scars',
+    5
+)
+murloc = Monster(
+    'Murloc',
+    f"""
+a small, amphibious creature with webbed appendages, emitting gurgling
+sounds""",
+    5
+)
+cave_troll = Monster(
+    'Cave Troll',
+    f"""
+a hulking figure draped in crude hides, its massive frame adorned with tangled
+mossy hair and thick, gnarled limbs clutching a stone club, its eyes glowing
+with a primal, fierce intensity""",
+    5
+)
+forest_troll = Monster(
+    'Forest Troll',
+    'a creature taller than the average human, its rugged, bark-like skin',
+    5
+)
+basilisk = Monster(
+    'Basilisk',
+    f"""
+a serpentine creature with shimmering scales of iridescent hues, its piercing
+gaze freezing the air around it, a forked tongue flickering as it hisses,
+emanating an aura of petrifying danger""",
+    5
+)
+wyvern = Monster(
+    'Wyvern',
+    f"""
+a formidable winged creature with scaled skin shimmering in the dim light,
+razor-sharp talons gripping the cave floor as its leathery wings fold against
+its sleek body, keen eyes fixated on the intruder with a calculated intensity,
+ready to take flight at the slightest provocation
+    """,
+    5
+)
 
 
 def dice_roll(player, monster):
-    """
-    Battle the monster by rolling the dice.
-    """
-    print(f'Lets [roll] the dice and kill the {monster.name}, or to end the game type [quit]')
+    """ Battle the monster by rolling the dice. """
+    print(f"""Lets [roll] the dice and kill the {monster.name},
+or to end the game type [quit]""")
 
     while True:
         roll_quit = input('>').lower()
@@ -98,20 +135,22 @@ def dice_roll(player, monster):
             monster.hp -= player_damage
             player.hp -= monster_damage
 
-            print(f"{player.name} dealt {player_damage} damage. {monster.name}'s remaining HP: {monster.hp}")
-            print(f"{monster.name} dealt {monster_damage} damage. {player.name}'s remaining HP: {player.hp}")
-            
+            print(f"""
+{player.name} dealt {player_damage} damage. {monster.name}'s remaining HP:
+{monster.hp}\n{monster.name} dealt {monster_damage} damage. {player.name}'s
+remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
                 print(f'The {monster.name} still moves lets [roll] again!')
             elif monster.hp <= 1 or player.hp <= 1:
                 break
         elif roll_quit == 'quit':
-            print('Sad to see you go warrior! Come back and fight the dungeon again one day!')
+            print(f"""
+Sad to see you go warrior! Come back and fight the dungeon again one day!""")
             # Add a way to restart game here!
         else:
-            print('Invalid input!')
-            print('Type [roll] to attack or [quit] to end game')
+            print(f"""
+Invalid input!\nType [roll] to attack or [quit] to end game""")
 
     if monster.hp <= 0:
         print(f"The {monster.name} is dead!")
@@ -120,28 +159,36 @@ def dice_roll(player, monster):
 
 
 def path_one():
+    """ First path player can take """
     print(f"You enter a cave and you see {ork.description} it's an {ork.name}!")
     dice_roll(player, ork)
+
     if player.hp >= 0:
-        print('You survived the encountor!\n')
-        print('Now you stand before a choice again will you go [left] or [right]?')
+        print(f"""
+You survived the encountor!\n
+Now you stand before a choice again will you go [left] or [right]?""")
+        
         while True:
             choice_one = input('>').lower()
             if choice_one == 'left':
-                print(f"You enter a dank cave with a puddle and you see {murloc.description} it's an {murloc.name}!")
+                print(f"""
+You enter a dank cave with a puddle and you see {murloc.description} it's an
+{murloc.name}!""")
                 dice_roll(player, murloc)
                 if player.hp >= 0:
-                    print('You survived the encountor!\n')
-                    print('Now you stand before a choice again will you go [left] or [right]?')
+                    print(f"""
+You survived the encountor!\n
+Now you stand before a choice again will you go [left] or [right]?""")
             elif choice_one == 'right':
-                print(f"You enter a new cave and you see {goblin.description} it's an {goblin.name}!")
+                print(f"""
+You enter a new cave and you see {goblin.description} it's an {goblin.name}!""")
                 dice_roll(player, goblin)
                 if player.hp >= 0:
-                    print('You survived the encountor!\n')
-                    print('Now you stand before a choice again will you go [left] or [right]?')
+                    print(f"""
+You survived the encountor!\n
+Now you stand before a choice again will you go [left] or [right]?""")
             else:
                 print('Invalid choice. Choose [left] or [right].')
-
 
 
 player_name = get_player_name()
