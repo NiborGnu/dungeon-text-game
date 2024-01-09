@@ -29,3 +29,17 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 -----
 Happy coding!
+
+
+
+
+
+
+
+
+
+BUGGS
+1. Bugg: function difficulty did not work
+    Solved: "()" after lower in the input line: "input('>').lower"()""
+
+2. 
