@@ -11,27 +11,21 @@ import time  # Add a timer function and a scoreboard
 from simple_term_menu import TerminalMenu
 
 
-player_name = get_player_name()
-player_hp = difficulty()
-player = Player(player_name, player_hp)
-game()
-
-
-def game():
+def main_game():
     print(f'Hail {player.name} good to meet you!')
     level_one()
 
 
 # Player
 class Player():
-    """ Player setup """
+    """Player setup"""
     def __init__(self, name, hp):
         self.name = name
         self.hp = hp
 
 
 def get_player_name():
-    """ Get player name """
+    """Get player name"""
     print('Hail warrior! State your name: \n')
     while True:
         player_name = input('>')
@@ -63,9 +57,9 @@ def difficulty():
 
 
 def level_one():
-    """ First route player can take """
-    print(f"""You enter a cave and you see {monster.ork.description}
-it's an {monster.ork.name}!""")
+    """First route player can take"""
+    print(f"""\nYou enter a cave and you see {monster.ork.description}
+it's an {monster.ork.name}!\n""")
     diceroll.dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -79,7 +73,7 @@ Now you stand before a choice again will you go [left] or [right]?""")
                 print(f"""
 You enter a dank cave with a puddle and you see {monster.murloc.description}
 it's an {monster.murloc.name}!""")
-                diceroll.dice_roll(player, murloc)
+                diceroll.dice_roll(player, monster.murloc)
                 if player.hp >= 0:
                     print(f"""
 You survived the encountor!\n
@@ -95,3 +89,9 @@ You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
             else:
                 print('Invalid choice. Choose [left] or [right].')
+
+
+player_name = get_player_name()
+player_hp = difficulty()
+player = Player(player_name, player_hp)
+main_game()

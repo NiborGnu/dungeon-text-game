@@ -1,17 +1,19 @@
 # Dice Roll function 
 
 import random
-
+from simple_term_menu import TerminalMenu
 
 
 def dice_roll(player, monster):
-    """ Battle the monster by rolling the dice. """
+    """Battle the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
-or to end the game type [quit]""")
+or to end the game [Quit]""")
+    options = ['Roll', 'Quit']
+    main_menu = TerminalMenu(options)
+    x = main_menu.show()
 
     while True:
-        roll_quit = input('>').lower()
-        if roll_quit == 'roll':
+        if x == 0:
             player_damage = random.randint(1, 6)
             monster_damage = random.randint(1, 6)
 
@@ -34,13 +36,11 @@ or to end the game type [quit]""")
                 print(f'The {monster.name} still moves lets [roll] again!')
             elif monster.hp <= 1 or player.hp <= 1:
                 break
-        elif roll_quit == 'quit':
+        elif x == 1:
             print(f"""
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
-            # Add a way to restart game here!
-        else:
-            print(f"""
-Invalid input!\nType [roll] to attack or [quit] to end game""")
+            # Quit function needed
+            break
 
     if monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!")
