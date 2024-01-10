@@ -33,7 +33,7 @@ or to end the game [Quit]""")
 {player.name}'s remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
-                print(f'The {monster.name} still moves lets [roll] again!')
+                print(f'\nThe {monster.name} still moves lets [roll] again!')
             elif monster.hp <= 1 or player.hp <= 1:
                 break
         elif x == 1:

@@ -42,8 +42,8 @@ def difficulty():
     """Choose difficulty between easy, normal or hard"""
     print('What difficulty do you crave, warrior?\n')
     diff = ['Easy - 100 HP', 'Normal - 50 HP', 'Hard - 25 HP']
-    main_menu = TerminalMenu(diff)
-    x = main_menu.show()
+    difficulty_menu = TerminalMenu(diff)
+    x = difficulty_menu.show()
 
     if x == 0:
         print('Difficulty Easy - 100hp set\n')
@@ -66,30 +66,31 @@ it's an {monster.ork.name}!\n""")
         print(f"""
 You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
+    path = ['Left', 'Right', 'Quit']
+    path_menu = TerminalMenu(path)
 
-        while True:
-            choice_one = input('>').lower()
-            if choice_one == 'left':
-                print(f"""
+    while True:
+        x = path_menu.show()
+        if x == 0:
+            print(f"""
 You enter a dank cave with a puddle and you see {monster.murloc.description}
 it's an {monster.murloc.name}!""")
-                diceroll.dice_roll(player, monster.murloc)
-                if player.hp >= 0:
-                    print(f"""
+            diceroll.dice_roll(player, monster.murloc)
+            if player.hp >= 0:
+                print(f"""
 You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
-            elif choice_one == 'right':
-                print(f"""
+        elif x == 1:
+            print(f"""
 You enter a new cave and you see {monster.goblin.description}
 it's an {monster.goblin.name}!""")
-                diceroll.dice_roll(player, monster.goblin)
-                if player.hp >= 0:
-                    print(f"""
+            diceroll.dice_roll(player, monster.goblin)
+            if player.hp >= 0:
+                print(f"""
 You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
-            else:
-                print('Invalid choice. Choose [left] or [right].')
-
+        elif x == 2:
+            # quit function
 
 player_name = get_player_name()
 player_hp = difficulty()
