@@ -58,8 +58,7 @@ def difficulty():
 
 def level_one():
     """First route player can take"""
-    print(f"""\nYou enter a cave and you see {monster.ork.description}
-it's an {monster.ork.name}!\n""")
+    print(f"{monster.ork.description} it's a it's an {monster.ork.name}")
     diceroll.dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -72,24 +71,21 @@ Now you stand before a choice again will you go [left] or [right]?""")
     while True:
         x = path_menu.show()
         if x == 0:
-            print(f"""
-You enter a dank cave with a puddle and you see {monster.murloc.description}
-it's an {monster.murloc.name}!""")
+            print(f"{monster.murloc.description} it's a {monster.murloc.name}")
             diceroll.dice_roll(player, monster.murloc)
             if player.hp >= 0:
                 print(f"""
 You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
         elif x == 1:
-            print(f"""
-You enter a new cave and you see {monster.goblin.description}
-it's an {monster.goblin.name}!""")
+            print(f"{monster.goblin.description} it's a {monster.goblin.name}")
             diceroll.dice_roll(player, monster.goblin)
             if player.hp >= 0:
                 print(f"""
 You survived the encountor!\n
 Now you stand before a choice again will you go [left] or [right]?""")
         elif x == 2:
+            print('quiting...')
             # quit function
 
 player_name = get_player_name()
