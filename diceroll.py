@@ -1,18 +1,19 @@
 # Dice Roll function 
 
 import random
+import player
 from simple_term_menu import TerminalMenu
 
 
 def dice_roll(player, monster):
     """Battle the monster by rolling the dice."""
-    print(f"""Lets [roll] the dice and kill the{monster.name},
+        print(f"""Lets [roll] the dice and kill the{monster.name},
 or to end the game [Quit]\n""")
-    options = ['Roll', 'Quit']
-    roll_quit_menu = TerminalMenu(options)
-    x = roll_quit_menu.show()
-
     while True:
+        options = ['Roll', 'Quit']
+        roll_quit_menu = TerminalMenu(options)
+        x = roll_quit_menu.show()
+
         if x == 0:
             player_damage = random.randint(1, 6)
             monster_damage = random.randint(1, 6)
@@ -27,14 +28,13 @@ or to end the game [Quit]\n""")
                 player.hp = 0
 
             print(f"""
-{player.name} dealt {player_damage} damage.
-{monster.name}'s remaining HP: {monster.hp}
+ {player.name} dealt {player_damage} damage.
+{monster.name}'s remaining HP: {monster.hp}\n
 {monster.name} dealt {monster_damage} damage.
-{player.name}'s remaining HP: {player.hp}""")
+ {player.name}'s remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
                 print(f'\nThe {monster.name} still moves lets [roll] again!\n')
-                roll_quit_menu.show()
             elif monster.hp <= 1 or player.hp <= 1:
                 break
         elif x == 1:
