@@ -2,9 +2,15 @@ import monster
 import player
 from diceroll import dice_roll
 from simple_term_menu import TerminalMenu
+import os
+
+def clear_screen():
+    """Clear the terminal screen."""
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def level_zero(player):
     """Dungeon entrance"""
+    clear_screen()
     print(f"""
 Hail {player.name}! Good to meet you!
 You are cleared to move into the dungeon!
@@ -18,10 +24,12 @@ Or will you [Quit] before entering!\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_one_first(player)
             # level 2 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_one_second(player)
             # level 2 path
@@ -46,10 +54,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_two_first(player)
             # level 2 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_two_second(player)
             # level 2 path
@@ -75,10 +85,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_two_second(player)
             # level 2 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_two_third(player)
             # level 2 path
@@ -104,10 +116,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_three_first(player)
             # level 3 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_three_second(player)
             # level 3 path
@@ -133,10 +147,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_three_second(player)
             # level 3 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_three_third(player)
             # level 3 path
@@ -162,10 +178,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_three_third(player)
             # level 3 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_three_fourth(player)
             # level 3 path
@@ -191,10 +209,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_fourth_first(player)
             # level 4 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_fourth_second(player)
             # level 4 path
@@ -221,10 +241,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_fourth_first(player)
             # level 4 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_fourth_second(player)
             # level 4 path
@@ -251,10 +273,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_fourth_second(player)
             # level 4 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_fourth_third(player)
             # level 4 path
@@ -280,10 +304,12 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
     while True:
         x = path_menu.show()
         if x == 0:
+            clear_screen()
             print('\nYou choose the left path and start walking')
             level_fourth_second(player)
             # level 4 path
         elif x == 1:
+            clear_screen()
             print('\nYou choose the right path and start walking')
             level_fourth_third(player)
             # level 4 path
