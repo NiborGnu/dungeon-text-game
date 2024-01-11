@@ -7,7 +7,7 @@ from simple_term_menu import TerminalMenu
 
 def dice_roll(player, monster):
     """Battle the monster by rolling the dice."""
-        print(f"""Lets [roll] the dice and kill the{monster.name},
+    print(f"""Lets [roll] the dice and kill the{monster.name},
 or to end the game [Quit]\n""")
     while True:
         options = ['Roll', 'Quit']
