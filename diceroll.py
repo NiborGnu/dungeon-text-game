@@ -4,7 +4,7 @@ from simple_term_menu import TerminalMenu
 
 def dice_roll(player, monster):
     """Player battle the monster by rolling the dice."""
-    print(f"""Lets [roll] the dice and kill the{monster.name},
+    print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Quit]\n""")
     
     while True:
@@ -25,13 +25,13 @@ or to end the game [Quit]\n""")
             player.hp = max(0, player.hp)
 
             print(f"""
- {player.name} dealt {player_damage} damage.
+{player.name} dealt {player_damage} damage.
 {monster.name}'s remaining HP: {monster.hp}\n
 {monster.name} dealt {monster_damage} damage.
- {player.name}'s remaining HP: {player.hp}""")
+{player.name}'s remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
-                print(f'\nThe{monster.name} still moves lets [roll] again!\n')
+                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
             elif monster.hp <= 1 or player.hp <= 1:
                 break
         elif x == 1:
@@ -41,6 +41,6 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
             break
 
     if monster.hp <= 0:
-        print(f"\nThe{monster.name} is dead!")
+        print(f"\nThe {monster.name} is dead!")
     elif player.hp <= 0:
         print(f"{player.name} has been defeated!")

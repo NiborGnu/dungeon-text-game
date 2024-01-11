@@ -11,7 +11,7 @@ class Monster():
 
 
 goblin = Monster(
-    " Goblin",
+    "Goblin",
     f"""
 You enter a cave and you see a shape.
 It's wiry frame draped in tattered garments,
@@ -21,7 +21,7 @@ eyes gleaming with a mischievous glint, """,
 )
 
 ork = Monster(
-    " Ork",
+    "Ork",
     f"""
 You enter a cave and you see a towering
 and brutishly built shape,
@@ -30,7 +30,7 @@ its grizzled body marked with scars, """,
 )
 
 murloc = Monster(
-    " Murloc",
+    "Murloc",
     f"""
 You enter a dank cave with a pond
 in the middle and you see a small,
@@ -40,7 +40,7 @@ emitting gurgling sounds, """,
 )
 
 cave_troll = Monster(
-    " Cave Troll",
+    "Cave Troll",
     f"""
 You enter a cave and you see a hulking figure
 draped in crude hides, its massive frame
@@ -51,7 +51,7 @@ its eyes glowing with a intensity, """,
 )
 
 forest_troll = Monster(
-    " Forest Troll",
+    "Forest Troll",
     f"""
 You enter a opening clad with greenery a creature
 taller than the average human,
@@ -60,7 +60,7 @@ its bark-like frame turns towards you, """,
 )
 
 basilisk = Monster(
-    " Basilisk",
+    "Basilisk",
     f"""
 You enter a big cave and you see a creature
 with shimmering scales of iridescent colors,
@@ -71,7 +71,7 @@ emanating an aura of petrifying danger, """,
 )
 
 wyvern = Monster(
-    " Wyvern",
+    "Wyvern",
     f"""
 You enter a big cave and you see a formidable
 winged creature, with scaled skin shimmering
@@ -84,7 +84,7 @@ flight at the slightest provocation, """,
 )
 
 black_dragon = Monster(
-    " Black Dragon",
+    "Black Dragon",
     f"""
 You enter a vast expanse of a cavern, shadows
 dance in the dim light. Massive scales shimmer,
