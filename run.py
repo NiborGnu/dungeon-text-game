@@ -12,7 +12,6 @@ from simple_term_menu import TerminalMenu
 
 
 def main_game():
-    print(f'Hail {player.player.name} good to meet you!')
     paths.level_zero()
 
 main_game()

@@ -7,8 +7,10 @@ from simple_term_menu import TerminalMenu
 
 def level_zero():
     """Dungeon entrence"""
-    print(f"""You are cleared to move into the dungeon!
-You enter the opening and before you are 2 paths leading forth!
+    print(f"""
+Hail {player.player.name} good to meet you!
+You are cleared to move into the dungeon!
+You enter the opening and before you are 2 paths leading forth!\n
 Where way will you go? [Left] or [Right]
 Or will you [Quit] before entering!\n""")
     path = ['Left', 'Right', 'Quit']
@@ -31,13 +33,13 @@ Or will you [Quit] before entering!\n""")
 ######## level 1 first encounter ########
 def level_one_first():
     """First route player can take"""
-    print(f"{monster.goblin.description}it's an{monster.goblin.name}!\n")
+    print(f"{monster.goblin.description}it's a{monster.goblin.name}!\n")
     dice_roll(player.player, monster.goblin)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -65,8 +67,8 @@ def level_one_second():
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -94,8 +96,8 @@ def level_two_first():
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -118,13 +120,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 2 second encounter ########
 def level_two_second():
     """First route player can take"""
-    print(f"{monster.murloc.description}it's an{monster.murloc.name}!\n")
+    print(f"{monster.murloc.description}it's a{monster.murloc.name}!\n")
     dice_roll(player.player, monster.murloc)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -147,13 +149,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 2 third encounter ########
 def level_two_third():
     """First route player can take"""
-    print(f"{monster.goblin.description}it's an{monster.goblin.name}!\n")
+    print(f"{monster.goblin.description}it's a{monster.goblin.name}!\n")
     dice_roll(player.player, monster.goblin)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -176,13 +178,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 first encounter ########
 def level_three_first():
     """First route player can take"""
-    print(f"{monster.wyvern.description}it's an{monster.wyvern.name}!\n")
+    print(f"{monster.wyvern.description}it's a{monster.wyvern.name}!\n")
     dice_roll(player.player, monster.wyvern)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -206,13 +208,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_three_second():
     """First route player can take"""
     print(f"""{monster.forest_troll.description}
-it's an{monster.forest_troll.name}!\n""")
+it's a{monster.forest_troll.name}!\n""")
     dice_roll(player.player, monster.forest_troll)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -236,13 +238,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_three_third():
     """First route player can take"""
     print(f"""{monster.cave_troll.description}
-    it's an{monster.cave_troll.name}!\n""")
+    it's a{monster.cave_troll.name}!\n""")
     dice_roll(player.player, monster.cave_troll)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -265,13 +267,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 fourth encounter ########
 def level_three_fourth():
     """First route player can take"""
-    print(f"{monster.basilisk.description}it's an{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
     dice_roll(player.player, monster.basilisk)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -294,13 +296,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 4 first encounter ########
 def level_fourth_first():
     """First route player can take"""
-    print(f"{monster.basilisk.description}it's an{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
     dice_roll(player.player, monster.basilisk)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -321,13 +323,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 4 second encounter ########
 def level_fourth_second():
     """First route player can take"""
-    print(f"{monster.basilisk.description}it's an{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
     dice_roll(player.player, monster.basilisk)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -348,13 +350,13 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 4 third encounter ########
 def level_fourth_third():
     """First route player can take"""
-    print(f"{monster.basilisk.description}it's an{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
     dice_roll(player.player, monster.basilisk)
 
     if player.player.hp >= 0:
         print(f"""
-You survived the encountor!\n
-And finds 2 more paths at the far end...
+You survived the encountor!
+And finds 2 more paths at the far end...\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -376,7 +378,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_five_first():
     """First route player can take"""
     print(f"""{monster.black_dragon.description}
-it's an{monster.black_dragon.name}!!!\n""")
+it's a{monster.black_dragon.name}!!!\n""")
     dice_roll(player.player, monster.black_dragon)
 
     if player.player.hp >= 0:

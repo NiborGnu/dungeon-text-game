@@ -6,8 +6,8 @@ from simple_term_menu import TerminalMenu
 
 def dice_roll(player, monster):
     """Battle the monster by rolling the dice."""
-    print(f"""Lets [roll] the dice and kill the {monster.name},
-or to end the game [Quit]""")
+    print(f"""Lets [roll] the dice and kill the{monster.name},
+or to end the game [Quit]\n""")
     options = ['Roll', 'Quit']
     roll_quit_menu = TerminalMenu(options)
     x = roll_quit_menu.show()
@@ -33,7 +33,7 @@ or to end the game [Quit]""")
 {player.name}'s remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
-                print(f'\nThe {monster.name} still moves lets [roll] again!')
+                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
                 roll_quit_menu.show()
             elif monster.hp <= 1 or player.hp <= 1:
                 break
