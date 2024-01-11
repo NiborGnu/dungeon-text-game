@@ -39,11 +39,14 @@ Happy coding!
 
 
 BUGGS
-1. Bugg: function difficulty did not work
+1. Bugg: Function difficulty did not work
     Solved: "()" after lower in the input line: "input('>').lower"()""
 
-2. Bugg: game did not find player value
+2. Bugg: Game did not find player value
     Solved: moved player_name = get_player_name()
             player_hp = difficulty()
             player = Player(player_name, player_hp)
             out of game function
+
+3. Bugg: Error in code from diceroll.py
+    Solved: deleted 4 spaces so print was on right line
