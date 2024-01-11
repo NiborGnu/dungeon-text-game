@@ -14,12 +14,17 @@ def get_player_name():
     print('\nHail warrior! State your name: \n')
     while True:
         player_name = input('>')
-        if len(player_name) <= 20:
-            return player_name
-        else:
+        if len(player_name) >= 20:
             print(f"""
 I don't have room on my paper for that long a name!\n
 Do you have a nickname i can call you?(Max 20 characters)\n""")
+        elif len(player_name) <= 0:
+            print('You do have a name right?')
+        elif len(player_name) <= 1:
+            print('Really one character? Maybe you have 1 more to use?')
+        else:
+            return player_name
+            
 
 
 # Difficulty
@@ -42,7 +47,3 @@ Enter to select\n""")
     elif x == 2:
         print('Difficulty Hard - 25HP set\n')
         return 25
-
-player_name = get_player_name()
-player_hp = difficulty()
-player = Player(player_name, player_hp)
