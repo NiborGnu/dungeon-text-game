@@ -9,8 +9,8 @@ def dice_roll(player, monster):
     print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Quit]""")
     options = ['Roll', 'Quit']
-    main_menu = TerminalMenu(options)
-    x = main_menu.show()
+    roll_quit_menu = TerminalMenu(options)
+    x = roll_quit_menu.show()
 
     while True:
         if x == 0:
@@ -28,12 +28,13 @@ or to end the game [Quit]""")
 
             print(f"""
 {player.name} dealt {player_damage} damage.
-{monster.name}'s remaining HP: {monster.hp}\n
+{monster.name}'s remaining HP: {monster.hp}
 {monster.name} dealt {monster_damage} damage.
 {player.name}'s remaining HP: {player.hp}""")
 
             if monster.hp >= 1:
                 print(f'\nThe {monster.name} still moves lets [roll] again!')
+                roll_quit_menu.show()
             elif monster.hp <= 1 or player.hp <= 1:
                 break
         elif x == 1:
