@@ -16,24 +16,26 @@ def main_game():
     player = Player(player_name, player_hp)
     paths.level_zero(player)
 
+def main_start_menu():
+    print(f"""
+    ####################################
+    #   Step into the Dungeon Game!    #
+    # As a warrior, seek glory or face #
+    #  the perilous embrace of death.  #
+    #    Good luck on your journey!    #
+    #    See you on the other side!    #
+    ####################################
+    """)
 
-print(f"""
-####################################
-#   Step into the Dungeon Game!    #
-# As a warrior, seek glory or face #
-#  the perilous embrace of death.  #
-#    Good luck on your journey!    #
-#    See you on the other side!    #
-####################################
-""")
+    options = ['Start Game', 'How to play', 'Quit']
+    main_menu = TerminalMenu(options)
+    x = main_menu.show()
 
-options = ['Start Game', 'How to play', 'Quit']
-main_menu = TerminalMenu(options)
-x = main_menu.show()
+    if x == 0:
+        main_game()
+    elif x == 1:
+        print('How to play: ...')
+    elif x == 2:
+        print('Exiting the game. Goodbye!')
 
-if x == 0:
-    main_game()
-elif x == 1:
-    print('How to play: ...')
-elif x == 2:
-    print('Exiting the game. Goodbye!')
+main_start_menu()
