@@ -13,7 +13,7 @@ def get_player_name():
     """Get player name"""
     print('\nHail warrior! State your name: \n')
     while True:
-        player_name = input('>')
+        player_name = input('>\n')
         if len(player_name) >= 20:
             print(f"""
 I don't have room on my paper for that long a name!\n
