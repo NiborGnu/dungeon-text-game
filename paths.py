@@ -36,8 +36,15 @@ Or will you [Quit] before entering!\n""")
             level_one_second(player)
             # level 2 path
         elif x == 2:
-            print('Quitting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
+
 
 ######## level 1 first encounter ########
 def level_one_first(player):
@@ -66,8 +73,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_two_second(player)
             # level 2 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 1 second encounter ########
@@ -97,8 +110,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_two_third(player)
             # level 2 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 2 first encounter ########
@@ -128,8 +147,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_second(player)
             # level 3 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 2 second encounter ########
@@ -159,8 +184,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_third(player)
             # level 3 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 2 third encounter ########
@@ -190,8 +221,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_fourth(player)
             # level 3 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 3 first encounter ########
@@ -221,8 +258,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_second(player)
             # level 4 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 3 second encounter ########
@@ -253,8 +296,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_second(player)
             # level 4 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 3 third encounter ########
@@ -285,8 +334,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_third(player)
             # level 4 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 3 fourth encounter ########
@@ -316,8 +371,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_third(player)
             # level 4 path
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 4 first encounter ########
@@ -378,8 +439,14 @@ def level_fourth_first(player):
             print('\nYou choose the right path and start walking')
             # Win
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 4 second encounter ########
@@ -405,8 +472,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             print('\nYou choose the right path and start walking')
             # lose
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 4 third encounter ########
@@ -432,8 +505,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             print('\nYou choose the right path and start walking')
             # Win
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
 
 
 ######## level 5 encounter ########
@@ -461,5 +540,11 @@ it's a{monster.black_dragon.name}!!!\n""")
             print('\nYou choose the right path and start walking')
             # Win
         elif x == 2:
-            print('Quiting...')
-            # quit function
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            break
