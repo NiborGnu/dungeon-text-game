@@ -1,11 +1,10 @@
 # Monsters
 
-
 class Monster():
-    """
-    Creating monsters
-    """
+    """Class for creating monsters"""
+
     def __init__(self, name, description, hp):
+        """Initialize a monster with a name, description, and health points."""
         self.name = name
         self.description = description
         self.hp = hp
@@ -20,6 +19,7 @@ with a crooked grin revealing jagged teeth and
 eyes gleaming with a mischievous glint, """,
     5
 )
+
 ork = Monster(
     " Ork",
     f"""
@@ -28,6 +28,7 @@ and brutishly built shape,
 its grizzled body marked with scars, """,
     5
 )
+
 murloc = Monster(
     " Murloc",
     f"""
@@ -37,6 +38,7 @@ amphibious creature with webbed appendages,
 emitting gurgling sounds, """,
     5
 )
+
 cave_troll = Monster(
     " Cave Troll",
     f"""
@@ -47,6 +49,7 @@ gnarled limbs clutching a stone club,
 its eyes glowing with a intensity, """,
     5
 )
+
 forest_troll = Monster(
     " Forest Troll",
     f"""
@@ -55,6 +58,7 @@ taller than the average human,
 its bark-like frame turns towards you, """,
     5
 )
+
 basilisk = Monster(
     " Basilisk",
     f"""
@@ -65,6 +69,7 @@ a forked tongue flickering as it hisses,
 emanating an aura of petrifying danger, """,
     7
 )
+
 wyvern = Monster(
     " Wyvern",
     f"""
@@ -77,6 +82,7 @@ with a calculated intensity, ready to take
 flight at the slightest provocation, """,
     7
 )
+
 black_dragon = Monster(
     " Black Dragon",
     f"""

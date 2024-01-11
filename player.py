@@ -1,16 +1,17 @@
 from simple_term_menu import TerminalMenu
 
 
-# Player
 class Player():
     """Player setup"""
+
     def __init__(self, name, hp):
+        """Initialize a player's name and healt points"""
         self.name = name
         self.hp = hp
 
 
 def get_player_name():
-    """Get player name"""
+    """Get player name from user. Making sure it's between 2-20 charcters"""
     print('\nHail warrior! State your name: \n')
     while True:
         player_name = input('>\n')
@@ -26,10 +27,9 @@ Do you have a nickname i can call you?(Max 20 characters)\n""")
             return player_name
             
 
-
 # Difficulty
 def difficulty():
-    """Choose difficulty between easy, normal or hard"""
+    """User choose difficulty between easy, normal or hard"""
     print(f"""
 What difficulty do you crave, warrior?\n
 Use arrows to navigate Up and Down.
