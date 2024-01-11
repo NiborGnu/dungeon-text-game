@@ -1,6 +1,7 @@
 import monster
 import player
 import time
+import random
 import os
 from diceroll import dice_roll
 from simple_term_menu import TerminalMenu
@@ -43,13 +44,14 @@ Or will you [Quit] before entering!\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 1 first encounter ########
 def level_one_first(player):
     """Level 1 first choice from the left"""
-    print(f"{monster.goblin.description}it's a{monster.goblin.name}!\n")
+    print(f"{monster.goblin.description} it's a {monster.goblin.name}!\n")
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
@@ -80,13 +82,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 1 second encounter ########
 def level_one_second(player):
     """Level 1 second choice from the left"""
-    print(f"{monster.ork.description}it's an{monster.ork.name}!\n")
+    print(f"{monster.ork.description} it's an {monster.ork.name}!\n")
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -117,13 +120,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 2 first encounter ########
 def level_two_first(player):
     """Level 2 first choice from the left"""
-    print(f"{monster.ork.description}it's an{monster.ork.name}!\n")
+    print(f"{monster.ork.description} it's an {monster.ork.name}!\n")
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -154,13 +158,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 2 second encounter ########
 def level_two_second(player):
     """Level 2 second choice from the left"""
-    print(f"{monster.murloc.description}it's a{monster.murloc.name}!\n")
+    print(f"{monster.murloc.description} it's a {monster.murloc.name}!\n")
     dice_roll(player, monster.murloc)
 
     if player.hp >= 0:
@@ -191,13 +196,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 2 third encounter ########
 def level_two_third(player):
     """Level 2 third choice from the left"""
-    print(f"{monster.goblin.description}it's a{monster.goblin.name}!\n")
+    print(f"{monster.goblin.description} it's a {monster.goblin.name}!\n")
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
@@ -228,13 +234,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 3 first encounter ########
 def level_three_first(player):
     """Level 3 first choice from the left"""
-    print(f"{monster.wyvern.description}it's a{monster.wyvern.name}!\n")
+    print(f"{monster.wyvern.description} it's a {monster.wyvern.name}!\n")
     dice_roll(player, monster.wyvern)
 
     if player.hp >= 0:
@@ -265,6 +272,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
@@ -272,7 +280,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_three_second(player):
     """Level 3 second choice from the left"""
     print(f"""{monster.forest_troll.description}
-it's a{monster.forest_troll.name}!\n""")
+it's a {monster.forest_troll.name}!\n""")
     dice_roll(player, monster.forest_troll)
 
     if player.hp >= 0:
@@ -303,6 +311,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
@@ -310,7 +319,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_three_third(player):
     """Level 3 third choice from the left"""
     print(f"""{monster.cave_troll.description}
-    it's a{monster.cave_troll.name}!\n""")
+    it's a {monster.cave_troll.name}!\n""")
     dice_roll(player, monster.cave_troll)
 
     if player.hp >= 0:
@@ -341,13 +350,14 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 3 fourth encounter ########
 def level_three_fourth(player):
     """Level 3 fourth choice from the left"""
-    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description} it's a {monster.basilisk.name}!\n")
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
@@ -378,6 +388,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
@@ -433,11 +444,12 @@ def level_fourth_first(player):
 # You've fallen victim to a cunning trick!       #
 ##################################################
 """)
-            time.sleep(5)
+            time.sleep(10)
             level_zero(player)
         elif x == 1:
             print('\nYou choose the right path and start walking')
-            # Win
+            treasure(player)
+            
         elif x == 2:
             clear_screen()
             print(f"""
@@ -446,46 +458,81 @@ def level_fourth_first(player):
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
 ######## level 4 second encounter ########
 def level_fourth_second(player):
     """Level 4 second choice from the left"""
-    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
-    dice_roll(player, monster.basilisk)
-
-    if player.hp >= 0:
-        print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
-    path_menu = TerminalMenu(path)
+    print(f"""
+#####################################################
+# The path transitions into a lush greenery, and    #
+# a serene clearing unfolds before you. At the      #
+# center of the clearing, a graceful dryad appears, #
+# her presence emanating tranquility. She gazes at  #
+# you with curiosity and speaks in a melodic voice: #
+#                                                   #
+# Dryad: Greetings, brave adventurer! Before you    #
+# lies a treasure beyond measure, guarded not by    #
+# force, but by wit. Are you skilled in the art of  #
+# mathematics? If so, prove your prowess, and the   #
+# riches shall be yours.                            #
+#####################################################
+""")
+    
+    # Generate random numbers and operation
+    num1 = random.randint(1, 400)
+    num2 = random.randint(1, 400)
+    num3 = random.randint(1, 20)
+    num4 = random.randint(1, 20)
+    
+    # Randomly choose an operation
+    operation = random.choice(['+', '-', '*'])
+    
+    if operation == '+':
+        correct_answer = num1 + num2
+        question = f"What is the sum of {num1} + {num2}? "
+    elif operation == '-':
+        correct_answer = num1 - num2
+        question = f"What is the sum of {num1} - {num2}? "
+    elif operation == '*':
+        correct_answer = num1 * num2
+        question = f"What is the sum of {num3} * {num4}? "
 
     while True:
-        x = path_menu.show()
-        if x == 0:
-            print('\nYou choose the left path and start walking')
-            # win --> Move on
-        elif x == 1:
-            print('\nYou choose the right path and start walking')
-            # lose
-        elif x == 2:
-            clear_screen()
+        check = input(question)
+        try:
+            answer = int(check)
+        except ValueError:
+            print('Invalid input. Please enter a number.')
+            continue
+
+        if answer == correct_answer:
             print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
+You have answerd the dryad correctly and will get a gift 
 """)
-            break
+            level_five_second(player)
+        elif answer != correct_answer:
+            print(f"""
+#####################################################
+# You chose a different path, missing out on the    #
+# dryad's mysterious gift. The allure of the        #
+# unknown remains as you proceed deeper into the    #
+# dungeon, embracing new challenges and adventures. #
+#                                                   #
+# The Dryad is gone and the path is emty once more. #
+# All evidence it was there gone with it.           #
+# You shake your head and continue.                 #
+#####################################################
+""")
+            level_five_first(player)
 
 
 ######## level 4 third encounter ########
 def level_fourth_third(player):
     """Level 4 third choice from the left"""
-    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description} it's a {monster.basilisk.name}!\n")
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
@@ -503,7 +550,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             # Lose
         elif x == 1:
             print('\nYou choose the right path and start walking')
-            # Win
+            treasure(player)
         elif x == 2:
             clear_screen()
             print(f"""
@@ -512,6 +559,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
 
 
@@ -519,7 +567,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 def level_five_first(player):
     """Level 5 'Boss fight'"""
     print(f"""{monster.black_dragon.description}
-it's a{monster.black_dragon.name}!!!\n""")
+it's a {monster.black_dragon.name}!!!\n""")
     dice_roll(player, monster.black_dragon)
 
     if player.hp >= 0:
@@ -547,4 +595,73 @@ it's a{monster.black_dragon.name}!!!\n""")
 #  See you on your next adventure!  #
 #####################################
 """)
+            time.sleep(10)
             break
+
+
+######## level 5 encounter ########
+def level_five_second(player):
+    """Level 5 'Boss fight' with multiplyed attack"""
+    print(f"""{monster.black_dragon.description}
+it's a {monster.black_dragon.name}!!!\n""")
+    dice_roll(player, monster.black_dragon)
+
+    if player.hp >= 0:
+        print(f"""You survived the encountor!\n""")
+    
+    path = ['Left', 'Right', 'Quit']
+    path_menu = TerminalMenu(path)
+
+    while True:
+        x = path_menu.show()
+        if x == 0:
+            print('\nYou choose the left path and start walking')
+            # Lose
+        elif x == 1:
+            print('\nYou choose the right path and start walking')
+            # Win
+        elif x == 2:
+            clear_screen()
+            print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#####################################
+""")
+            time.sleep(10)
+            break
+
+
+def treasure(player):
+    print(f"""
+#####################################################
+# You follow the path, and just as doubt creeps     #
+# in about continuing forward, a breathtaking       #
+# sight unfolds before you – a treasure so abundant #
+# it seems surreal. The glittering riches and       #
+# artifacts strewn across the chamber leave you     #
+# in awe, making you question whether such a        #
+# discovery is even possible.                       #
+#                                                   #
+# As you marvel at the bounty, you notice an        #
+# ancient portal tucked away in the corner.         #
+# Its shimmering energy suggests a way out of       #
+# the dungeon, providing a tempting opportunity     #
+# to secure your newfound treasures and escape      #
+# the perilous depths. The decision now lies        #
+# with you – continue exploring the riches, or      #
+# step through the portal and exit the dungeon.     #
+# The path to your destiny awaits.                  #
+#####################################################
+""")
+    time.sleep(30)
+    clear_screen()
+    print(f"""
+#####################################################
+#####################################################
+###################### THE END ######################
+#####################################################
+#####################################################
+""")    
+    time.sleep(10)
+    return
