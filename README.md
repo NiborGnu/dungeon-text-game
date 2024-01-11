@@ -50,3 +50,10 @@ BUGGS
 
 3. Bugg: Error in code from diceroll.py
     Solved: deleted 4 spaces so print was on right line
+
+
+
+Took line to clean screen from text from 
+https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+
+poke answer.
