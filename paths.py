@@ -4,7 +4,6 @@ import time
 import os
 from diceroll import dice_roll
 from simple_term_menu import TerminalMenu
-from run import quit_game
 
 def clear_screen():
     """Clear the terminal screen."""
