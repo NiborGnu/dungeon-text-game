@@ -1,12 +1,15 @@
 import monster
 import player
+import time
+import os
 from diceroll import dice_roll
 from simple_term_menu import TerminalMenu
-import os
+from run import quit_game
 
 def clear_screen():
     """Clear the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def level_zero(player):
     """Dungeon entrance"""
@@ -321,22 +324,57 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 4 first encounter ########
 def level_fourth_first(player):
     """Level 4 first choice from the left"""
-    print(f"{monster.basilisk.description}it's a{monster.basilisk.name}!\n")
-    dice_roll(player, monster.basilisk)
+    texts = [    
+"#############################################",
+"# In the depths of the dungeon, the path    #",
+"# abruptly transformed beneath your feet,   #",
+"# shifting from rugged rock to a smooth     #",
+"# wooden floor. Surprised, you cautiously   #",
+"# continued forward, guided by the          #",
+"# unexpected change in terrain.             #",
+"# The dim, foreboding corridors gave way    #",
+"# to a warmly lit room, its shelves adorned #",
+"# with countless tomes. As you took in the  #",
+"# sight of this peculiar library, a figure  #",
+"# caught your eye. A old bent wizard        #",
+"# stood amidst the books, engrossed in the  #",
+"# ancient knowledge they held.              #",
+"# He looked up from his reading as you      #",
+"# entered, his wise eyes meeting yours.     #",
+"# With a gentle smile, the wizard said:     #",
+"# Greetings, adventurer. The path has led   #",
+"# you to my sanctuary of knowledge. Would   #",
+"# you seek something more? Perhaps the      #",
+"# allure of treasure awaits you. Would you  #",
+"# like to be transported to its hidden      #",
+"# location?                                 #",
+"#                                           #",
+"# The offer hung in the air, and the        #",
+"# possibilities echoed in the hallowed      #",
+"# room of books. What choice will you make? #",
+"#############################################"
+]
+    for text in texts:
+        print(text)
+        time.sleep(1)
 
-    if player.hp >= 0:
-        print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Take the offer', "Don't take the offer", 'Quit']
     path_menu = TerminalMenu(path)
 
     while True:
         x = path_menu.show()
         if x == 0:
-            print('\nYou choose the left path and start walking')
-            # Lose
+            print(f"""
+##################################################
+# Upon accepting the offer, the wizard instructs #
+# you to step into a magic circle. As he utters  #
+# the incantation, the last image burned into    #
+# your memory is the wizard's sinister smile.    #
+# You've fallen victim to a cunning trick!       #
+##################################################
+""")
+            time.sleep(5)
+            level_zero(player)
         elif x == 1:
             print('\nYou choose the right path and start walking')
             # Win
