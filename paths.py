@@ -1,14 +1,38 @@
 import monster
-import player
 import time
 import random
 import os
+import sys
 from diceroll import dice_roll
 from simple_term_menu import TerminalMenu
 
 def clear_screen():
     """Clear the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def restart_quit_game():
+    """Quit the game"""
+    clear_screen()
+    
+
+    options = ['Restart Game', 'Quit']
+    quit_menu = TerminalMenu(options)
+    x = quit_menu.show()
+
+    if x == 0:
+        os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
+
+    elif x == 1:
+        print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#       Quitting in 2 second...     #
+#####################################
+""")
+        time.sleep(2)
+        sys.exit(0)
 
 
 def level_zero(player):
@@ -37,15 +61,7 @@ Or will you [Quit] before entering!\n""")
             level_one_second(player)
             # level 2 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 1 first encounter ########
@@ -75,15 +91,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_two_second(player)
             # level 2 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 1 second encounter ########
@@ -113,15 +121,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_two_third(player)
             # level 2 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 2 first encounter ########
@@ -151,15 +151,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_second(player)
             # level 3 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 2 second encounter ########
@@ -189,15 +181,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_third(player)
             # level 3 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 2 third encounter ########
@@ -227,15 +211,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_three_fourth(player)
             # level 3 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 3 first encounter ########
@@ -265,15 +241,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_second(player)
             # level 4 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 3 second encounter ########
@@ -304,15 +272,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_second(player)
             # level 4 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 3 third encounter ########
@@ -343,15 +303,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_third(player)
             # level 4 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 3 fourth encounter ########
@@ -381,15 +333,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             level_fourth_third(player)
             # level 4 path
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 4 first encounter ########
@@ -451,15 +395,7 @@ def level_fourth_first(player):
             treasure(player)
             
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 4 second encounter ########
@@ -479,6 +415,7 @@ def level_fourth_second(player):
 # mathematics? If so, prove your prowess, and the   #
 # riches shall be yours.                            #
 #####################################################
+If you want to [restart] or [quit] type that.
 """)
     
     # Generate random numbers and operation
@@ -492,16 +429,20 @@ def level_fourth_second(player):
     
     if operation == '+':
         correct_answer = num1 + num2
-        question = f"What is the sum of {num1} + {num2}? "
+        question = f"What is the sum of {num1} + {num2}\n>?"
     elif operation == '-':
         correct_answer = num1 - num2
-        question = f"What is the sum of {num1} - {num2}? "
+        question = f"What is the sum of {num1} - {num2}\n>?"
     elif operation == '*':
         correct_answer = num1 * num2
-        question = f"What is the sum of {num3} * {num4}? "
+        question = f"What is the sum of {num3} * {num4}?\n>"
 
     while True:
         check = input(question)
+
+        if check.lower == 'restart' or check.lower == 'quit':
+            restart_quit_game()
+
         try:
             answer = int(check)
         except ValueError:
@@ -552,15 +493,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             print('\nYou choose the right path and start walking')
             treasure(player)
         elif x == 2:
-            clear_screen()
-            print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 5 encounter ########

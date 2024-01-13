@@ -3,6 +3,7 @@ import paths
 import time
 from simple_term_menu import TerminalMenu
 import os
+import sys
 
 def clear_screen():
     """Clear the terminal screen."""
@@ -30,7 +31,7 @@ def main_start_menu():
 ####################################
 """)
 
-    options = ['Start Game', 'How to play', 'Quit']
+    options = ['Start Game', 'How to play', 'Restart/Quit']
     main_menu = TerminalMenu(options)
     x = main_menu.show()
 
@@ -39,26 +40,30 @@ def main_start_menu():
     elif x == 1:
         print('How to play: ...')
     elif x == 2:
-        print('Exiting the game in 3 seconds')
-        time.sleep(3)
-        quit_game()
+        restart_quit_game()
 
 
-def quit_game():
+def restart_quit_game():
     """Quit the game"""
     clear_screen()
-    print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
+    print("Do you wan't to restart or quit playing?")
 
-    options = ['Restart Game']
+    options = ['Restart Game', 'Quit']
     quit_menu = TerminalMenu(options)
     x = quit_menu.show()
 
     if x == 0:
-        main_start_menu()
+        os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
+
+    elif x == 1:
+        print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+#  See you on your next adventure!  #
+#       Quitting in 2 second...     #
+#####################################
+""")
+        time.sleep(2)
+        sys.exit(0)
 
 main_start_menu()
