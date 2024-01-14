@@ -12,17 +12,17 @@ class Player():
 
 def get_player_name():
     """Get player name from user. Making sure it's between 2-20 charcters"""
-    print('\nHail warrior! State your name: \n')
+    print('\nHail warrior! State your name:')
     while True:
-        player_name = input('>\n')
+        player_name = input('>')
         if len(player_name) >= 20:
             print(f"""
 I don't have room on my paper for that long a name!\n
-Do you have a nickname i can call you?(Max 20 characters)\n""")
+Do you have a nickname i can call you?(2 - 20 characters needed)""")
         elif len(player_name) <= 0:
-            print('You do have a name right?')
+            print('I need a name for my regestry')
         elif len(player_name) <= 1:
-            print('Really one character? Maybe you have 1 more to use?')
+            print('Really one character? (2 - 20 Characters needed)')
         else:
             return player_name
             
@@ -31,8 +31,8 @@ Do you have a nickname i can call you?(Max 20 characters)\n""")
 def difficulty():
     """User choose difficulty between easy, normal or hard"""
     print(f"""
-What difficulty do you crave, warrior?\n
-Use arrows to navigate Up and Down.
+What difficulty do you crave, Warrior?\n
+Use arrows to navigate Menu Up and Down.
 Enter to select\n""")
     diff = ['Easy - 100 HP', 'Normal - 50 HP', 'Hard - 25 HP']
     difficulty_menu = TerminalMenu(diff)
