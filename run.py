@@ -1,4 +1,4 @@
-import paths
+from paths import level_zero
 from player import Player, get_player_name, difficulty
 from simple_term_menu import TerminalMenu
 from os_sys_function import clear_screen, restart_quit_game
@@ -9,7 +9,7 @@ def main_game():
     player_name = get_player_name()
     player_hp = difficulty()
     player = Player(player_name, player_hp)
-    paths.level_zero(player)
+    level_zero(player)
 
 
 def main_start_menu():
