@@ -27,7 +27,7 @@ def main_start_menu():
 ####################################
 """)
 
-    options = ['Start Game', 'How to play', 'Quit']
+    options = ['Start Game', 'How to play']
     main_menu = TerminalMenu(options)
     x = main_menu.show()
 
@@ -45,9 +45,6 @@ def main_start_menu():
 
         if x == 0:
             main_start_menu()
-
-    elif x == 2:
-        exit(0)
 
 if __name__ == "__main__":
     main_start_menu()
