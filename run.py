@@ -38,12 +38,12 @@ def main_start_menu():
 3. Have fun.
 """)
         options = ['Back to Menu']
-        main_menu = TerminalMenu(options)
-        x = main_menu.show()
+        go_back = TerminalMenu(options)
+        x = go_back.show()
 
         if x == 0:
-            main_start_menu
-            
+            main_start_menu()
+
     elif x == 2:
         restart_quit_game()
 
