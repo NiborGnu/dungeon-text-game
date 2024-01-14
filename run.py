@@ -37,6 +37,13 @@ def main_start_menu():
 2. Choose a option in menu by keys [up] and [down]
 3. Have fun.
 """)
+        options = ['Back to Menu']
+        main_menu = TerminalMenu(options)
+        x = main_menu.show()
+
+        if x == 0:
+            main_start_menu
+            
     elif x == 2:
         restart_quit_game()
 
