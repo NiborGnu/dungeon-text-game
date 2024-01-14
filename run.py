@@ -47,5 +47,5 @@ def main_start_menu():
     elif x == 2:
         restart_quit_game()
 
-
-main_start_menu()
+if __name__ == "__main__":
+    main_start_menu()

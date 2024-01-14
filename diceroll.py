@@ -1,4 +1,5 @@
 import random
+from time import sleep
 from os_sys_function import restart_quit_game
 from simple_term_menu import TerminalMenu
 
@@ -42,6 +43,7 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
 
     if monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!")
+        sleep(2)
     elif player.hp <= 0:
         print(f"{player.name} has been defeated!")
 
@@ -85,5 +87,6 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
 
     if monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!")
+        sleep(2)
     elif player.hp <= 0:
         print(f"{player.name} has been defeated!")

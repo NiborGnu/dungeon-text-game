@@ -12,11 +12,16 @@ def level_zero(player):
     """Dungeon entrance"""
     clear_screen()
     print(f"""
-Hail {player.name}! Good to meet you!
-You are cleared to move into the dungeon!
-You enter the opening, and before you are 2 paths leading forth!\n
-Which way will you go? [Left] or [Right]
-Or will you [Quit] before entering!\n""")
+##############################################
+# Hail {player.name}! Good to meet you!
+# You are cleared to move into the dungeon!  #
+# You enter the opening, and before you      #
+# are 2 paths leading forth! Left and right  #
+##############################################
+##############################################
+# Which way will you go? [Left] or [Right]   #
+# Or will you [Quit] before entering!        #
+##############################################""")
 
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -45,8 +50,10 @@ def level_one_first(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -75,8 +82,10 @@ def level_one_second(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -105,8 +114,10 @@ def level_two_first(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -135,8 +146,10 @@ def level_two_second(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -165,8 +178,10 @@ def level_two_third(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -195,8 +210,10 @@ def level_three_first(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -225,8 +242,10 @@ def level_three_second(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -255,8 +274,10 @@ def level_three_third(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -285,8 +306,10 @@ def level_three_fourth(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -449,8 +472,10 @@ def level_fourth_third(player):
 
     if player.hp >= 0:
         print(f"""
-You survived the encounter!
-And finds 2 more paths at the far end...\n
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -474,7 +499,10 @@ def level_five_first(player):
     dice_roll(player, monster.black_dragon)
 
     if player.hp >= 0:
-        print(f"""You survived the encountor!\n""")
+        print(f"""
+###############################
+# You survived the encountor! #
+###############################""")
     
     
     
@@ -510,7 +538,10 @@ it's a {monster.black_dragon.name}!!!\n""")
     dice_roll_2(player, monster.black_dragon)
 
     if player.hp >= 0:
-        print(f"""You survived the encountor!\n""")
+        print(f"""
+###############################
+# You survived the encountor! #
+###############################""")
     
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
