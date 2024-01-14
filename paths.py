@@ -423,10 +423,10 @@ If you want to [restart] or [quit] type that.
     
     if operation == '+':
         correct_answer = num1 + num2
-        question = f"What is the sum of {num1} + {num2}\n>?"
+        question = f"What is the sum of {num1} + {num2}\n>"
     elif operation == '-':
         correct_answer = num1 - num2
-        question = f"What is the sum of {num1} - {num2}\n>?"
+        question = f"What is the sum of {num1} - {num2}\n>"
     elif operation == '*':
         correct_answer = num1 * num2
         question = f"What is the sum of {num3} * {num4}?\n>"
@@ -434,7 +434,7 @@ If you want to [restart] or [quit] type that.
     while True:
         check = input(question)
 
-        if check.lower == 'restart' or check.lower == 'quit':
+        if check.lower() == 'restart' or check.lower() == 'quit':
             restart_quit_game()
 
         try:
@@ -445,7 +445,15 @@ If you want to [restart] or [quit] type that.
 
         if answer == correct_answer:
             print(f"""
-You have answerd the dryad correctly and will get a gift 
+##############################################################
+# In recognition of your astute identification of the answer,#
+# a mystical boon awaits you. Behold the bestowed gift:      #
+# the enchantment of double damage, destined to surge        #
+# through your weapon in the imminent battles ahead.         #
+# Go forth, valiant warrior, wield this newfound power       #
+# with valor, and let the resonance of victory echo          #
+# in the realms of the dugneon!                              #
+##############################################################
 """)
             level_five_second(player)
         elif answer != correct_answer:
@@ -466,28 +474,71 @@ You have answerd the dryad correctly and will get a gift
 
 ######## level 4 third encounter ########
 def level_fourth_third(player):
-    """Level 4 third choice from the left"""
-    print(f"{monster.basilisk.description}\n")
-    dice_roll(player, monster.basilisk)
+    texts = [
+"######################################################",
+"# Upon an ornate bed adorned with silken drapes      #",
+"# and glistening jewels, lies a Sleeping Beauty,     #",
+"# countenance serene in the undisturbed embrace      #",
+"# of a magical slumber. The soft glow of moonlight   #",
+"# bathes the room, casting an ethereal aura.         #",
+"# A delicate sign placed near the bed bears          #",
+"# testament to a haunting curse, telling of a deep   #",
+"# enchantment that has plunged the beauty into an    #",
+"# unending sleep. The words reveal the only          #",
+"# antidote to this magical malady—a kiss of true     #",
+"# love, a remedy whispered through the ages.         #",
+"# The inscription delicately details the nature of   #",
+"# the curse, describing the beauty's repose as a     #",
+"# consequence of a malevolent spell woven by dark    #",
+"# forces. Only the touch of an authentic love, pure  #",
+"# and genuine, possesses the power to break the      #",
+"# spell, rousing the sleeping maiden from bewitched  #",
+"# dreams. As the moonlight weaves through the        #",
+"# tapestries, the room remains suspended in a        #",
+"# timeless hush, waiting for the fateful moment when #",
+"# a lover's kiss shall dispel the enchantment and    #",
+"# awaken Sleeping Beauty to a world long yearned for.#",
+"######################################################"
+]
+    for text in texts:
+        print(text)
+        time.sleep(1)
 
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Kiss the Beauty', 'Walk away', 'Quit']
     path_menu = TerminalMenu(path)
 
     while True:
         x = path_menu.show()
         if x == 0:
-            print('\nYou choose the left path and start walking')
-            # Lose
-        elif x == 1:
-            print('\nYou choose the right path and start walking')
+            print('You walk past and glanse back and see a horror')
             treasure(player)
+        elif x == 1:
+            text = [
+"###################################################################"
+"# As your lips meet those of Sleeping Beauty, a sudden tremor     #"
+"# reverberates through the room, and the world tilts on its axis. #"
+"# A disorienting daze envelops you as you collapse to the floor,  #"
+"# the taste of poison lingering on your lips. The air thickens    #"
+"# with malevolence, and mocking laughter echoes in your ears,     #"
+"# an insidious taunt from an unseen malefactor.                   #"
+"# The room blurs as the poison courses through your veins, and    #"
+"# the once-promised victory transforms into a bitter defeat.      #"
+"# In the fading consciousness, you discern the haunting echo of   #"
+"# the evil laughter, a cruel reminder of a trap intricately laid  #"
+"# and effortlessly sprung. As darkness claims your senses,        #"
+"# the last vestiges of awareness are consumed by the chilling     #"
+"# realization that, in the game of fate, you were but a pawn      #"
+"# manipulated by a malevolent force—a force that reveled in your  #"
+"# vulnerability and relished the simplicity with which it         #"
+"# tricked your noble intentions.                                  #"
+"###################################################################"
+]
+            for text in texts:
+                print(text)
+                time.sleep(1)
+            time.sleep(10)
+            restart_quit_game()
+
         elif x == 2:
             restart_quit_game()
 
@@ -507,18 +558,15 @@ def level_five_first(player):
     
     
     
-    path = ['Left', 'Right', 'Quit']
+    path = ['Continue', 'Quit']
     path_menu = TerminalMenu(path)
 
     while True:
         x = path_menu.show()
         if x == 0:
-            print('\nYou choose the left path and start walking')
-            # Lose
+            print('Walk away and see a opening and continu that way')
+            treasure()
         elif x == 1:
-            print('\nYou choose the right path and start walking')
-            # Win
-        elif x == 2:
             clear_screen()
             print(f"""
 #####################################
@@ -527,7 +575,7 @@ def level_five_first(player):
 #####################################
 """)
             time.sleep(10)
-            break
+            restart_quit_game()
 
 
 ######## level 5 encounter ########
@@ -543,18 +591,15 @@ it's a {monster.black_dragon.name}!!!\n""")
 # You survived the encountor! #
 ###############################""")
     
-    path = ['Left', 'Right', 'Quit']
+    path = ['Continue', 'Quit']
     path_menu = TerminalMenu(path)
 
     while True:
         x = path_menu.show()
         if x == 0:
-            print('\nYou choose the left path and start walking')
-            # Lose
+            print('Walk away and see a opening and continu that way')
+            treasure()
         elif x == 1:
-            print('\nYou choose the right path and start walking')
-            # Win
-        elif x == 2:
             clear_screen()
             print(f"""
 #####################################
@@ -563,7 +608,7 @@ it's a {monster.black_dragon.name}!!!\n""")
 #####################################
 """)
             time.sleep(10)
-            break
+            restart_quit_game()
 
 
 def treasure(player):
@@ -598,4 +643,4 @@ def treasure(player):
 #####################################################
 """)    
     time.sleep(10)
-    return
+    restart_quit_game()
