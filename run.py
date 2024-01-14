@@ -33,7 +33,7 @@ def main_start_menu():
         main_game()
     elif x == 1:
         print(f"""
-1. Type you name. 2 - 20 charcters
+1. Type when asked to and no menu
 2. Choose a option in menu by keys [up] and [down]
 3. Have fun.
 """)
