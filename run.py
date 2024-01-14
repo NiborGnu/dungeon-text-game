@@ -1,13 +1,7 @@
-from player import Player, get_player_name, difficulty
 import paths
-import time
+from player import Player, get_player_name, difficulty
 from simple_term_menu import TerminalMenu
-import os
-import sys
-
-def clear_screen():
-    """Clear the terminal screen."""
-    os.system('cls' if os.name == 'nt' else 'clear')
+from os_sys_function import clear_screen, restart_quit_game
 
 
 def main_game():
@@ -38,32 +32,13 @@ def main_start_menu():
     if x == 0:
         main_game()
     elif x == 1:
-        print('How to play: ...')
+        print(f"""
+1. Type you name. 2 - 20 charcters
+2. Choose a option in menu by keys [up] and [down]
+3. Have fun.
+""")
     elif x == 2:
         restart_quit_game()
 
-
-def restart_quit_game():
-    """Quit the game"""
-    clear_screen()
-    print("Do you wan't to restart or quit playing?")
-
-    options = ['Restart Game', 'Quit']
-    quit_menu = TerminalMenu(options)
-    x = quit_menu.show()
-
-    if x == 0:
-        os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
-
-    elif x == 1:
-        print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#       Quitting in 2 second...     #
-#####################################
-""")
-        time.sleep(2)
-        sys.exit(0)
 
 main_start_menu()

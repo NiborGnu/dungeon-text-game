@@ -1,38 +1,11 @@
+# Change "level (number) path" to specific monster
+
 import monster
 import time
 import random
-import os
-import sys
-from diceroll import dice_roll
+from os_sys_function import clear_screen, restart_quit_game
+from diceroll import dice_roll, dice_roll_2
 from simple_term_menu import TerminalMenu
-
-def clear_screen():
-    """Clear the terminal screen."""
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-def restart_quit_game():
-    """Quit the game"""
-    clear_screen()
-    
-
-    options = ['Restart Game', 'Quit']
-    quit_menu = TerminalMenu(options)
-    x = quit_menu.show()
-
-    if x == 0:
-        os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
-
-    elif x == 1:
-        print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#       Quitting in 2 second...     #
-#####################################
-""")
-        time.sleep(2)
-        sys.exit(0)
 
 
 def level_zero(player):
@@ -537,7 +510,7 @@ def level_five_second(player):
     """Level 5 'Boss fight' with multiplyed attack"""
     print(f"""{monster.black_dragon.description}
 it's a {monster.black_dragon.name}!!!\n""")
-    dice_roll(player, monster.black_dragon)
+    dice_roll_2(player, monster.black_dragon)
 
     if player.hp >= 0:
         print(f"""You survived the encountor!\n""")
