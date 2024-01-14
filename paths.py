@@ -40,7 +40,7 @@ Or will you [Quit] before entering!\n""")
 ######## level 1 first encounter ########
 def level_one_first(player):
     """Level 1 first choice from the left"""
-    print(f"{monster.goblin.description} it's a {monster.goblin.name}!\n")
+    print(f"{monster.goblin.description}\n")
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
@@ -70,7 +70,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 1 second encounter ########
 def level_one_second(player):
     """Level 1 second choice from the left"""
-    print(f"{monster.ork.description} it's an {monster.ork.name}!\n")
+    print(f"{monster.ork.description}\n")
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -100,7 +100,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 2 first encounter ########
 def level_two_first(player):
     """Level 2 first choice from the left"""
-    print(f"{monster.ork.description} it's an {monster.ork.name}!\n")
+    print(f"{monster.ork.description}\n")
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
@@ -130,7 +130,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 2 second encounter ########
 def level_two_second(player):
     """Level 2 second choice from the left"""
-    print(f"{monster.murloc.description} it's a {monster.murloc.name}!\n")
+    print(f"{monster.murloc.description}\n")
     dice_roll(player, monster.murloc)
 
     if player.hp >= 0:
@@ -160,7 +160,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 2 third encounter ########
 def level_two_third(player):
     """Level 2 third choice from the left"""
-    print(f"{monster.goblin.description} it's a {monster.goblin.name}!\n")
+    print(f"{monster.goblin.description}\n")
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
@@ -190,7 +190,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 first encounter ########
 def level_three_first(player):
     """Level 3 first choice from the left"""
-    print(f"{monster.wyvern.description} it's a {monster.wyvern.name}!\n")
+    print(f"{monster.wyvern.description}\n")
     dice_roll(player, monster.wyvern)
 
     if player.hp >= 0:
@@ -220,8 +220,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 second encounter ########
 def level_three_second(player):
     """Level 3 second choice from the left"""
-    print(f"""{monster.forest_troll.description}
-it's a {monster.forest_troll.name}!\n""")
+    print(f"""{monster.forest_troll.description}\n""")
     dice_roll(player, monster.forest_troll)
 
     if player.hp >= 0:
@@ -251,8 +250,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 third encounter ########
 def level_three_third(player):
     """Level 3 third choice from the left"""
-    print(f"""{monster.cave_troll.description}
-    it's a {monster.cave_troll.name}!\n""")
+    print(f"""{monster.cave_troll.description}\n""")
     dice_roll(player, monster.cave_troll)
 
     if player.hp >= 0:
@@ -282,7 +280,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 3 fourth encounter ########
 def level_three_fourth(player):
     """Level 3 fourth choice from the left"""
-    print(f"{monster.basilisk.description} it's a {monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}\n")
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
@@ -446,7 +444,7 @@ You have answerd the dryad correctly and will get a gift
 ######## level 4 third encounter ########
 def level_fourth_third(player):
     """Level 4 third choice from the left"""
-    print(f"{monster.basilisk.description} it's a {monster.basilisk.name}!\n")
+    print(f"{monster.basilisk.description}\n")
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
@@ -472,8 +470,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 ######## level 5 encounter ########
 def level_five_first(player):
     """Level 5 'Boss fight'"""
-    print(f"""{monster.black_dragon.description}
-it's a {monster.black_dragon.name}!!!\n""")
+    print(f"""{monster.black_dragon.description}\n""")
     dice_roll(player, monster.black_dragon)
 
     if player.hp >= 0:
