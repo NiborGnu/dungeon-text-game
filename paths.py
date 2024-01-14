@@ -3,6 +3,8 @@
 import monster
 import time
 import random
+import os
+import sys
 from os_sys_function import clear_screen, restart_quit_game
 from diceroll import dice_roll, dice_roll_2
 from simple_term_menu import TerminalMenu
@@ -565,7 +567,7 @@ def level_five_first(player):
         x = path_menu.show()
         if x == 0:
             print('Walk away and see a opening and continu that way')
-            treasure()
+            treasure(player)
         elif x == 1:
             clear_screen()
             print(f"""
@@ -581,8 +583,7 @@ def level_five_first(player):
 ######## level 5 encounter ########
 def level_five_second(player):
     """Level 5 'Boss fight' with multiplyed attack"""
-    print(f"""{monster.black_dragon.description}
-it's a {monster.black_dragon.name}!!!\n""")
+    print(f"""{monster.black_dragon.description}\n""")
     dice_roll_2(player, monster.black_dragon)
 
     if player.hp >= 0:
@@ -598,7 +599,7 @@ it's a {monster.black_dragon.name}!!!\n""")
         x = path_menu.show()
         if x == 0:
             print('Walk away and see a opening and continu that way')
-            treasure()
+            treasure(player)
         elif x == 1:
             clear_screen()
             print(f"""
@@ -633,7 +634,7 @@ def treasure(player):
 # The path to your destiny awaits.                  #
 #####################################################
 """)
-    time.sleep(30)
+    time.sleep(20)
     clear_screen()
     print(f"""
 #####################################################
@@ -643,4 +644,4 @@ def treasure(player):
 #####################################################
 """)    
     time.sleep(10)
-    restart_quit_game()
+    os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
