@@ -1,7 +1,8 @@
 from paths import level_zero
 from player import Player, get_player_name, difficulty
 from simple_term_menu import TerminalMenu
-from os_sys_function import clear_screen, restart_quit_game
+from os_sys_function import clear_screen
+from sys import exit
 
 
 def main_game():
@@ -25,7 +26,7 @@ def main_start_menu():
 ####################################
 """)
 
-    options = ['Start Game', 'How to play', 'Restart/Quit']
+    options = ['Start Game', 'How to play', 'Quit']
     main_menu = TerminalMenu(options)
     x = main_menu.show()
 
@@ -45,7 +46,7 @@ def main_start_menu():
             main_start_menu()
 
     elif x == 2:
-        restart_quit_game()
+        exit(0)
 
 if __name__ == "__main__":
     main_start_menu()
