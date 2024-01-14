@@ -22,7 +22,7 @@ def restart_quit_game():
         print(f"""
 #####################################
 # Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
+# See you on your next adventure!   #
 #####################################
 """)
         sys.exit(0)

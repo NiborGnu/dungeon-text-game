@@ -7,10 +7,11 @@ from sys import exit
 
 def main_game():
     """Main function to start the game."""
-    player_name = get_player_name()
-    player_hp = difficulty()
-    player = Player(player_name, player_hp)
-    level_zero(player)
+    if __name__ == "__main__":
+        player_name = get_player_name()
+        player_hp = difficulty()
+        player = Player(player_name, player_hp)
+        level_zero(player)
 
 
 def main_start_menu():
