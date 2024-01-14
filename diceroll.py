@@ -1,14 +1,15 @@
 import random
+from os_sys_function import restart_quit_game
 from simple_term_menu import TerminalMenu
 
 
 def dice_roll(player, monster):
     """Player battle the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
-or to end the game [Quit]\n""")
+or to end the game [Restart]/[Quit]\n""")
     
     while True:
-        options = ['Roll', 'Quit']
+        options = ['Roll', 'Restart/Quit']
         roll_quit_menu = TerminalMenu(options)
         x = roll_quit_menu.show()
 
@@ -37,8 +38,7 @@ or to end the game [Quit]\n""")
         elif x == 1:
             print(f"""
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
-            # Quit function needed
-            break
+            restart_quit_game()
 
     if monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!")
@@ -49,10 +49,10 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
 def dice_roll_2(player, monster):
     """Player battle the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
-or to end the game [Quit]\n""")
+or to end the game [Restart]/[Quit]\n""")
     
     while True:
-        options = ['Roll', 'Quit']
+        options = ['Roll', 'Restart/Quit']
         roll_quit_menu = TerminalMenu(options)
         x = roll_quit_menu.show()
 
@@ -81,8 +81,7 @@ or to end the game [Quit]\n""")
         elif x == 1:
             print(f"""
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
-            # Quit function needed
-            break
+            restart_quit_game()
 
     if monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!")
