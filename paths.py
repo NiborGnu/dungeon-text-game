@@ -425,10 +425,10 @@ If you want to [restart] or [quit] type that.
     
     if operation == '+':
         correct_answer = num1 + num2
-        question = f"What is the sum of {num1} + {num2}\n>"
+        question = f"What is the sum of {num1} + {num2}?\n>"
     elif operation == '-':
         correct_answer = num1 - num2
-        question = f"What is the sum of {num1} - {num2}\n>"
+        question = f"What is the sum of {num1} - {num2}?\n>"
     elif operation == '*':
         correct_answer = num1 * num2
         question = f"What is the sum of {num3} * {num4}?\n>"
