@@ -1,20 +1,8 @@
 from sys import exit
-
 from os_sys_function import clear_screen
 from simple_term_menu import TerminalMenu
-
 from paths import level_zero
 from player import Player, get_player_name, difficulty
-
-
-def main_game():
-    """Main function to start the game."""
-    if __name__ == "__main__":
-        player_name = get_player_name()
-        player_hp = difficulty()
-        player = Player(player_name, player_hp)
-        game_path = level_zero(player)
-        main_start_menu()
 
 
 def main():
@@ -51,6 +39,16 @@ def main_start_menu():
 
         if x == 0:
             main_start_menu()
+
+
+def main_game():
+    """Main function to start the game."""
+    if __name__ == "__main__":
+        player_name = get_player_name()
+        player_hp = difficulty()
+        player = Player(player_name, player_hp)
+        game_path = level_zero(player)
+        main_start_menu()
 
 
 if __name__ == "__main__":
