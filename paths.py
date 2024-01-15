@@ -21,7 +21,7 @@ def level_zero(player):
 ##############################################
 # Which way will you go? [Left] or [Right]   #
 # Or will you [Quit] before entering!        #
-##############################################""")
+##############################################\n""")
 
     path = ['Left', 'Right', 'Quit']
     path_menu = TerminalMenu(path)
@@ -42,7 +42,6 @@ def level_zero(player):
             restart_quit_game()
 
 
-# level 1 first encounter
 def level_one_first(player):
     """Level 1 first choice from the left"""
     print(f"{monster.goblin.description}\n")
@@ -63,18 +62,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_two_first(player)
             # level 2 path
+            level_two_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_two_second(player)
             # level 2 path
+            level_two_second(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 1 second encounter
 def level_one_second(player):
     """Level 1 second choice from the left"""
     print(f"{monster.ork.description}\n")
@@ -95,18 +93,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_two_second(player)
             # level 2 path
+            level_two_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_two_third(player)
             # level 2 path
+            level_two_third(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 2 first encounter
 def level_two_first(player):
     """Level 2 first choice from the left"""
     print(f"{monster.ork.description}\n")
@@ -127,18 +124,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_three_first(player)
             # level 3 path
+            level_three_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_three_second(player)
             # level 3 path
+            level_three_second(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 2 second encounter
 def level_two_second(player):
     """Level 2 second choice from the left"""
     print(f"{monster.murloc.description}\n")
@@ -159,18 +155,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_three_second(player)
             # level 3 path
+            level_three_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_three_third(player)
             # level 3 path
+            level_three_third(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 2 third encounter
 def level_two_third(player):
     """Level 2 third choice from the left"""
     print(f"{monster.goblin.description}\n")
@@ -191,18 +186,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_three_third(player)
             # level 3 path
+            level_three_third(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_three_fourth(player)
             # level 3 path
+            level_three_fourth(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 3 first encounter
 def level_three_first(player):
     """Level 3 first choice from the left"""
     print(f"{monster.wyvern.description}\n")
@@ -223,18 +217,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_fourth_first(player)
             # level 4 path
+            level_fourth_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_fourth_second(player)
             # level 4 path
+            level_fourth_second(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 3 second encounter
 def level_three_second(player):
     """Level 3 second choice from the left"""
     print(f"""{monster.forest_troll.description}\n""")
@@ -255,18 +248,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_fourth_first(player)
             # level 4 path
+            level_fourth_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_fourth_second(player)
             # level 4 path
+            level_fourth_second(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 3 third encounter
 def level_three_third(player):
     """Level 3 third choice from the left"""
     print(f"""{monster.cave_troll.description}\n""")
@@ -287,18 +279,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_fourth_second(player)
             # level 4 path
+            level_fourth_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_fourth_third(player)
             # level 4 path
+            level_fourth_third(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 3 fourth encounter
 def level_three_fourth(player):
     """Level 3 fourth choice from the left"""
     print(f"{monster.basilisk.description}\n")
@@ -319,18 +310,17 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            level_fourth_second(player)
             # level 4 path
+            level_fourth_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            level_fourth_third(player)
             # level 4 path
+            level_fourth_third(player)
         elif x == 2:
             restart_quit_game()
 
 
-# level 4 first encounter
 def level_fourth_first(player):
     """Level 4 first choice from the left"""
     texts = [
@@ -392,7 +382,6 @@ def level_fourth_first(player):
             restart_quit_game()
 
 
-# level 4 second encounter
 def level_fourth_second(player):
     """Level 4 second choice from the left"""
     print("""
@@ -472,8 +461,8 @@ If you want to [restart] or [quit] type that.
             level_five_first(player)
 
 
-# level 4 third encounter
 def level_fourth_third(player):
+    """Level 4 third choice from the left"""
     texts = [
         "######################################################",
         "# Upon an ornate bed adorned with silken drapes      #",
@@ -547,9 +536,8 @@ def level_fourth_third(player):
             restart_quit_game()
 
 
-# level 5 encounter
 def level_five_first(player):
-    """Level 5 'Boss fight'"""
+    """Level 5 Boss fight"""
     print(f"""{monster.black_dragon.description}\n""")
     dice_roll(player, monster.black_dragon)
 
@@ -579,9 +567,8 @@ def level_five_first(player):
             restart_quit_game()
 
 
-# level 5 encounter
 def level_five_second(player):
-    """Level 5 'Boss fight' with multiplyed attack"""
+    """Level 5 Boss fight with multiplyed attack"""
     print(f"""{monster.black_dragon.description}\n""")
     dice_roll_2(player, monster.black_dragon)
 
@@ -612,6 +599,7 @@ def level_five_second(player):
 
 
 def treasure(player):
+    """End of Game"""
     print("""
 #####################################################
 # You follow the path, and just as doubt creeps     #
@@ -633,8 +621,7 @@ def treasure(player):
 # The path to your destiny awaits.                  #
 #####################################################
 """)
-    time.sleep(20)
-    clear_screen()
+    time.sleep(5)
     print("""
 #####################################################
 #####################################################
@@ -642,5 +629,18 @@ def treasure(player):
 #####################################################
 #####################################################
 """)
-    time.sleep(10)
-    os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
+    options = ['Restart Game', 'Quit']
+    quit_menu = TerminalMenu(options)
+    x = quit_menu.show()
+
+    if x == 0:
+        os.execl(sys.executable, sys.executable, *sys.argv)
+
+    elif x == 1:
+        print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+# See you on your next adventure!   #
+#####################################
+""")
+        sys.exit(0)
