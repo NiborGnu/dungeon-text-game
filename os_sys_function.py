@@ -15,7 +15,7 @@ def restart_quit_game():
     x = quit_menu.show()
 
     if x == 0:
-        os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
+        os.execl(sys.executable, sys.executable, *sys.argv)
 
     elif x == 1:
         print(f"""
