@@ -13,11 +13,11 @@ def main_game():
         player_name = get_player_name()
         player_hp = difficulty()
         player = Player(player_name, player_hp)
-        level_zero(player)
+        game_path = level_zero(player)
+        main_start_menu()
 
 
-def main_start_menu():
-    """Displays the main menu and handles user choices."""
+def main():
     clear_screen()
     print("""
 ####################################
@@ -28,7 +28,11 @@ def main_start_menu():
 #    See you on the other side!    #
 ####################################
 """)
+    main_start_menu()
 
+
+def main_start_menu():
+    """Displays the main menu and handles user choices."""
     options = ['Start Game', 'How to play']
     main_menu = TerminalMenu(options)
     x = main_menu.show()
@@ -50,4 +54,4 @@ def main_start_menu():
 
 
 if __name__ == "__main__":
-    main_start_menu()
+    main()
