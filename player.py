@@ -12,13 +12,16 @@ class Player():
 
 def get_player_name():
     """Get player name from the user, ensuring it's between 2-20 characters."""
-    print('\nHail warrior! State your name:')
+    print('Hail warrior! State your name:')
+    print('2-20 charcters. Only letters and numbers.')
     while True:
         player_name = input('>')
         if len(player_name) >= 20:
             print(f"""
 I don't have room on my paper for that long a name!\n
 Do you have a nickname I can call you? (2 - 20 characters needed)""")
+        elif not player_name.isalnum():
+            print('Please enter a name using only letters and numbers.')
         elif len(player_name) <= 0:
             print('I need a name for my registry')
         elif len(player_name) <= 1:
