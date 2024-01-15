@@ -49,7 +49,7 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
         sleep(2)
 
 
-def dice_roll(player, monster):
+def dice_roll_2(player, monster):
     """Player battles the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Restart]/[Quit]\n""")
