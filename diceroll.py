@@ -90,4 +90,3 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
         sleep(2)
     elif player.hp <= 0:
         print(f"{player.name} has been defeated!")
-        
