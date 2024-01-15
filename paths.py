@@ -13,7 +13,7 @@ import monster
 def level_zero(player):
     """Dungeon entrance"""
     clear_screen()
-    print(f"""
+    print("""
 ##############################################
 # Hail {player.name}! Good to meet you!
 # You are cleared to move into the dungeon!  #
@@ -51,7 +51,7 @@ def level_one_first(player):
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -83,7 +83,7 @@ def level_one_second(player):
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -115,7 +115,7 @@ def level_two_first(player):
     dice_roll(player, monster.ork)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -147,7 +147,7 @@ def level_two_second(player):
     dice_roll(player, monster.murloc)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -179,7 +179,7 @@ def level_two_third(player):
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -211,7 +211,7 @@ def level_three_first(player):
     dice_roll(player, monster.wyvern)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -243,7 +243,7 @@ def level_three_second(player):
     dice_roll(player, monster.forest_troll)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -275,7 +275,7 @@ def level_three_third(player):
     dice_roll(player, monster.cave_troll)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -307,7 +307,7 @@ def level_three_fourth(player):
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
@@ -375,7 +375,7 @@ def level_fourth_first(player):
     while True:
         x = path_menu.show()
         if x == 0:
-            print(f"""
+            print("""
 ##################################################
 # Upon accepting the offer, the wizard instructs #
 # you to step into a magic circle. As he utters  #
@@ -397,7 +397,7 @@ def level_fourth_first(player):
 ######## level 4 second encounter ########
 def level_fourth_second(player):
     """Level 4 second choice from the left"""
-    print(f"""
+    print("""
 #####################################################
 # The path transitions into a lush greenery, and    #
 # a serene clearing unfolds before you. At the      #
@@ -446,7 +446,7 @@ If you want to [restart] or [quit] type that.
             continue
 
         if answer == correct_answer:
-            print(f"""
+            print("""
 ##############################################################
 # In recognition of your astute identification of the answer,#
 # a mystical boon awaits you. Behold the bestowed gift:      #
@@ -459,7 +459,7 @@ If you want to [restart] or [quit] type that.
 """)
             level_five_second(player)
         elif answer != correct_answer:
-            print(f"""
+            print("""
 #####################################################
 # You chose a different path, missing out on the    #
 # dryad's mysterious gift. The allure of the        #
@@ -552,7 +552,7 @@ def level_five_first(player):
     dice_roll(player, monster.black_dragon)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ###############################
 # You survived the encountor! #
 ###############################""")
@@ -570,7 +570,7 @@ def level_five_first(player):
             treasure(player)
         elif x == 1:
             clear_screen()
-            print(f"""
+            print("""
 #####################################
 # Thank you for playing my dungeon! #
 #  See you on your next adventure!  #
@@ -587,7 +587,7 @@ def level_five_second(player):
     dice_roll_2(player, monster.black_dragon)
 
     if player.hp >= 0:
-        print(f"""
+        print("""
 ###############################
 # You survived the encountor! #
 ###############################""")
@@ -602,7 +602,7 @@ def level_five_second(player):
             treasure(player)
         elif x == 1:
             clear_screen()
-            print(f"""
+            print("""
 #####################################
 # Thank you for playing my dungeon! #
 #  See you on your next adventure!  #
@@ -613,7 +613,7 @@ def level_five_second(player):
 
 
 def treasure(player):
-    print(f"""
+    print("""
 #####################################################
 # You follow the path, and just as doubt creeps     #
 # in about continuing forward, a breathtaking       #
@@ -636,7 +636,7 @@ def treasure(player):
 """)
     time.sleep(20)
     clear_screen()
-    print(f"""
+    print("""
 #####################################################
 #####################################################
 ###################### THE END ######################
