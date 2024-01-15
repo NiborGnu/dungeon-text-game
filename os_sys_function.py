@@ -25,6 +25,6 @@ def restart_quit_game():
 #####################################
 """)
         sys.exit(0)
-    
+
     elif x == 2:
         return
