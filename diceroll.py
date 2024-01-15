@@ -49,7 +49,7 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
         sleep(2)
 
 
-def dice_roll_2(player, monster):
+def dice_roll(player, monster):
     """Player battles the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Restart]/[Quit]\n""")
@@ -77,17 +77,17 @@ or to end the game [Restart]/[Quit]\n""")
 {monster.name} dealt {monster_damage} damage.
 {player.name}'s remaining HP: {player.hp}""")
 
-            if monster.hp >= 1:
-                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
-            elif monster.hp <= 1 or player.hp <= 1:
+            if monster.hp <= 0 or player.hp <= 0:
                 break
+            elif monster.hp >= 1:
+                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
         elif x == 1:
             print(f"""
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
             restart_quit_game()
 
     if player.hp <= 0:
-        print(f"{player.name} has been defeated!")
+        print(f"\n{player.name} has been defeated!\n")
         end_of_game()
     elif monster.hp <= 0:
         print(f"\nThe {monster.name} is dead!\nProcessing ...")
