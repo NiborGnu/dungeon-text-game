@@ -3,14 +3,13 @@ import sys
 from simple_term_menu import TerminalMenu
 
 
-
 def clear_screen():
     """Clear the terminal screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def restart_quit_game():
-    """Quit the game"""
+    """Quit the game."""
     options = ['Restart Game', 'Quit', 'Back']
     quit_menu = TerminalMenu(options)
     x = quit_menu.show()

@@ -1,13 +1,13 @@
-# Change "level (number) path" to specific monster
-
-import monster
 import time
 import random
 import os
 import sys
+
 from os_sys_function import clear_screen, restart_quit_game
 from diceroll import dice_roll, dice_roll_2
 from simple_term_menu import TerminalMenu
+
+import monster
 
 
 def level_zero(player):

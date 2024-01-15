@@ -5,10 +5,10 @@ from simple_term_menu import TerminalMenu
 
 
 def dice_roll(player, monster):
-    """Player battle the monster by rolling the dice."""
+    """Player battles the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Restart]/[Quit]\n""")
-    
+
     while True:
         options = ['Roll', 'Restart/Quit']
         roll_quit_menu = TerminalMenu(options)
@@ -49,17 +49,17 @@ Sad to see you go warrior! Come back and fight the dungeon again one day!""")
 
 
 def dice_roll_2(player, monster):
-    """Player battle the monster by rolling the dice."""
+    """Player battles the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
 or to end the game [Restart]/[Quit]\n""")
-    
+
     while True:
         options = ['Roll', 'Restart/Quit']
         roll_quit_menu = TerminalMenu(options)
         x = roll_quit_menu.show()
 
         if x == 0:
-            player_damage = random.randint(1, 6)*2
+            player_damage = random.randint(1, 6) * 2
             monster_damage = random.randint(1, 6)
 
             # Deduct damage from monster's and player's health points

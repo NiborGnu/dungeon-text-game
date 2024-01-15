@@ -12,7 +12,7 @@ class Monster():
 
 goblin = Monster(
     "Goblin",
-    f"""
+    """
 ##################################################
 # You enter a cave and you see a shape.          #
 # It's wiry frame draped in tattered garments,   #
@@ -26,7 +26,7 @@ goblin = Monster(
 
 ork = Monster(
     "Ork",
-    f"""
+    """
 ###########################################
 # You enter a cave and you see a towering #
 # and brutishly built shape,              #
@@ -38,7 +38,7 @@ ork = Monster(
 
 murloc = Monster(
     "Murloc",
-    f"""
+    """
 ###############################################
 # You enter a dank cave with a pond           #
 # in the middle and you see a small,          #
@@ -51,7 +51,7 @@ murloc = Monster(
 
 cave_troll = Monster(
     "Cave Troll",
-    f"""
+    """
 #################################################
 # You enter a cave and you see a hulking figure #
 # draped in crude hides, its massive frame      #
@@ -65,7 +65,7 @@ cave_troll = Monster(
 
 forest_troll = Monster(
     "Forest Troll",
-    f"""
+    """
 #####################################################
 # You enter a opening clad with greenery a creature #
 # taller than the average human,                    #
@@ -77,7 +77,7 @@ forest_troll = Monster(
 
 basilisk = Monster(
     "Basilisk",
-    f"""
+    """
 #################################################
 # You enter a big cave and you see a creature   #
 # with shimmering scales of iridescent colors,  #
@@ -91,7 +91,7 @@ basilisk = Monster(
 
 wyvern = Monster(
     "Wyvern",
-    f"""
+    """
 #####################################################
 # You enter a big cave and you see a formidable     #
 # winged creature, with scaled skin shimmering      #
@@ -107,7 +107,7 @@ wyvern = Monster(
 
 black_dragon = Monster(
     "Black Dragon",
-    f"""
+    """
 #####################################################
 # You enter a vast expanse of a cavern, shadows     #
 # dance in the dim light. Massive scales shimmer,   #
@@ -115,6 +115,7 @@ black_dragon = Monster(
 # silhouette looms wrapped in midnight scales,      #
 # a force unmatched!                                #
 ############### It's a Black Dragon!! ###############
-#####################################################""",
+#####################################################
+""",
     10
 )

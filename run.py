@@ -1,8 +1,10 @@
+from sys import exit
+
+from os_sys_function import clear_screen
+from simple_term_menu import TerminalMenu
+
 from paths import level_zero
 from player import Player, get_player_name, difficulty
-from simple_term_menu import TerminalMenu
-from os_sys_function import clear_screen
-from sys import exit
 
 
 def main_game():
@@ -17,7 +19,7 @@ def main_game():
 def main_start_menu():
     """Displays the main menu and handles user choices."""
     clear_screen()
-    print(f"""
+    print("""
 ####################################
 #   Step into the Dungeon Game!    #
 # As a warrior, seek glory or face #
@@ -34,7 +36,7 @@ def main_start_menu():
     if x == 0:
         main_game()
     elif x == 1:
-        print(f"""
+        print("""
 1. Type when asked to and no menu
 2. Choose a option in menu by keys [up] and [down]
 3. Have fun.
@@ -45,6 +47,7 @@ def main_start_menu():
 
         if x == 0:
             main_start_menu()
+
 
 if __name__ == "__main__":
     main_start_menu()
