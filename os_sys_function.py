@@ -28,3 +28,22 @@ def restart_quit_game():
 
     elif x == 2:
         return
+
+
+def end_of_game():
+    """End of Game, dead or reached the end"""
+    options = ['Restart Game', 'Quit']
+    quit_menu = TerminalMenu(options)
+    x = quit_menu.show()
+
+    if x == 0:
+        os.execl(sys.executable, sys.executable, *sys.argv)
+
+    elif x == 1:
+        print(f"""
+#####################################
+# Thank you for playing my dungeon! #
+# See you on your next adventure!   #
+#####################################
+""")
+        sys.exit(0)

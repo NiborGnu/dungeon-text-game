@@ -1,6 +1,6 @@
 import random
 from time import sleep
-from os_sys_function import restart_quit_game
+from os_sys_function import restart_quit_game, end_of_game
 from simple_term_menu import TerminalMenu
 
 
@@ -32,20 +32,21 @@ or to end the game [Restart]/[Quit]\n""")
 {monster.name} dealt {monster_damage} damage.
 {player.name}'s remaining HP: {player.hp}""")
 
-            if monster.hp >= 1:
-                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
-            elif monster.hp <= 1 or player.hp <= 1:
+            if monster.hp <= 0 or player.hp <= 0:
                 break
+            elif monster.hp >= 1:
+                print(f'\nThe {monster.name} still moves lets [roll] again!\n')
         elif x == 1:
             print(f"""
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
             restart_quit_game()
 
-    if monster.hp <= 0:
-        print(f"\nThe {monster.name} is dead!")
+    if player.hp <= 0:
+        print(f"\n{player.name} has been defeated!\n")
+        end_of_game()
+    elif monster.hp <= 0:
+        print(f"\nThe {monster.name} is dead!\nProcessing ...")
         sleep(2)
-    elif player.hp <= 0:
-        print(f"{player.name} has been defeated!")
 
 
 def dice_roll_2(player, monster):
@@ -85,8 +86,9 @@ or to end the game [Restart]/[Quit]\n""")
 Sad to see you go warrior! Come back and fight the dungeon again one day!""")
             restart_quit_game()
 
-    if monster.hp <= 0:
-        print(f"\nThe {monster.name} is dead!")
-        sleep(2)
-    elif player.hp <= 0:
+    if player.hp <= 0:
         print(f"{player.name} has been defeated!")
+        end_of_game()
+    elif monster.hp <= 0:
+        print(f"\nThe {monster.name} is dead!\nProcessing ...")
+        sleep(2)

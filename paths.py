@@ -643,4 +643,4 @@ def treasure(player):
 # See you on your next adventure!   #
 #####################################
 """)
-        sys.exit(0)
+        end_of_game()
