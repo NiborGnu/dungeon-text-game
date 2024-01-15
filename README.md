@@ -25,6 +25,18 @@ Users can quickly learn the rules of the game and type any words according to th
   Link to the game: *https://dungeon-text-game-8f6df9144d01.herokuapp.com/*
 
 ---
+## User Stories
+### First Time Visitor Goals:
+
+* As a First Time Visitor, I want to quickly understand the program's primary purpose so that I can start to play.
+* As a First Time Visitor, I want to navigate through the program easily so that I can move true the game.
+* As a First Time Visitor, I want to relax and have fun playing the game.
+
+### Frequent Visitor Goals:
+* As a Frequent User, I want to be able to find different paths true the game.
+* As a Frequent User, I want the stories to be a bit different to have new experiences. 
+
+---
 
 
 
@@ -40,57 +52,7 @@ Users can quickly learn the rules of the game and type any words according to th
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Robin Ung,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
-
-
-
-
-
-
-
-
+---
 
 BUGGS
 1. Bugg: Function difficulty did not work
@@ -103,11 +65,12 @@ BUGGS
             out of game function
 
 3. Bugg: Error in code from diceroll.py
-    Solved: deleted 4 spaces so print was on right line
+    Solved: deleted 4 spaces so "print" was on the right line
 
 
+---
 
-Took line to clean screen from text from 
+Took code to "clean screen" from
 https://stackoverflow.com/questions/2084508/clear-terminal-in-python
 
 poke answer.
