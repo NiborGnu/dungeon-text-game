@@ -44,7 +44,7 @@ def level_zero(player):
             restart_quit_game()
 
 
-######## level 1 first encounter ########
+# level 1 first encounter
 def level_one_first(player):
     """Level 1 first choice from the left"""
     print(f"{monster.goblin.description}\n")
@@ -76,7 +76,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 1 second encounter ########
+# level 1 second encounter
 def level_one_second(player):
     """Level 1 second choice from the left"""
     print(f"{monster.ork.description}\n")
@@ -108,7 +108,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 2 first encounter ########
+# level 2 first encounter
 def level_two_first(player):
     """Level 2 first choice from the left"""
     print(f"{monster.ork.description}\n")
@@ -140,7 +140,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 2 second encounter ########
+# level 2 second encounter
 def level_two_second(player):
     """Level 2 second choice from the left"""
     print(f"{monster.murloc.description}\n")
@@ -172,7 +172,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 2 third encounter ########
+# level 2 third encounter
 def level_two_third(player):
     """Level 2 third choice from the left"""
     print(f"{monster.goblin.description}\n")
@@ -204,7 +204,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 3 first encounter ########
+# level 3 first encounter
 def level_three_first(player):
     """Level 3 first choice from the left"""
     print(f"{monster.wyvern.description}\n")
@@ -236,7 +236,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 3 second encounter ########
+# level 3 second encounter
 def level_three_second(player):
     """Level 3 second choice from the left"""
     print(f"""{monster.forest_troll.description}\n""")
@@ -268,7 +268,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 3 third encounter ########
+# level 3 third encounter
 def level_three_third(player):
     """Level 3 third choice from the left"""
     print(f"""{monster.cave_troll.description}\n""")
@@ -300,7 +300,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 3 fourth encounter ########
+# level 3 fourth encounter
 def level_three_fourth(player):
     """Level 3 fourth choice from the left"""
     print(f"{monster.basilisk.description}\n")
@@ -332,39 +332,39 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
             restart_quit_game()
 
 
-######## level 4 first encounter ########
+# level 4 first encounter
 def level_fourth_first(player):
     """Level 4 first choice from the left"""
-    texts = [    
-"#############################################",
-"# In the depths of the dungeon, the path    #",
-"# abruptly transformed beneath your feet,   #",
-"# shifting from rugged rock to a smooth     #",
-"# wooden floor. Surprised, you cautiously   #",
-"# continued forward, guided by the          #",
-"# unexpected change in terrain.             #",
-"# The dim, foreboding corridors gave way    #",
-"# to a warmly lit room, its shelves adorned #",
-"# with countless tomes. As you took in the  #",
-"# sight of this peculiar library, a figure  #",
-"# caught your eye. A old bent wizard        #",
-"# stood amidst the books, engrossed in the  #",
-"# ancient knowledge they held.              #",
-"# He looked up from his reading as you      #",
-"# entered, his wise eyes meeting yours.     #",
-"# With a gentle smile, the wizard said:     #",
-"# Greetings, adventurer. The path has led   #",
-"# you to my sanctuary of knowledge. Would   #",
-"# you seek something more? Perhaps the      #",
-"# allure of treasure awaits you. Would you  #",
-"# like to be transported to its hidden      #",
-"# location?                                 #",
-"#                                           #",
-"# The offer hung in the air, and the        #",
-"# possibilities echoed in the hallowed      #",
-"# room of books. What choice will you make? #",
-"#############################################"
-]
+    texts = [
+        "#############################################",
+        "# In the depths of the dungeon, the path    #",
+        "# abruptly transformed beneath your feet,   #",
+        "# shifting from rugged rock to a smooth     #",
+        "# wooden floor. Surprised, you cautiously   #",
+        "# continued forward, guided by the          #",
+        "# unexpected change in terrain.             #",
+        "# The dim, foreboding corridors gave way    #",
+        "# to a warmly lit room, its shelves adorned #",
+        "# with countless tomes. As you took in the  #",
+        "# sight of this peculiar library, a figure  #",
+        "# caught your eye. A old bent wizard        #",
+        "# stood amidst the books, engrossed in the  #",
+        "# ancient knowledge they held.              #",
+        "# He looked up from his reading as you      #",
+        "# entered, his wise eyes meeting yours.     #",
+        "# With a gentle smile, the wizard said:     #",
+        "# Greetings, adventurer. The path has led   #",
+        "# you to my sanctuary of knowledge. Would   #",
+        "# you seek something more? Perhaps the      #",
+        "# allure of treasure awaits you. Would you  #",
+        "# like to be transported to its hidden      #",
+        "# location?                                 #",
+        "#                                           #",
+        "# The offer hung in the air, and the        #",
+        "# possibilities echoed in the hallowed      #",
+        "# room of books. What choice will you make? #",
+        "#############################################"
+    ]
     for text in texts:
         print(text)
         time.sleep(1)
@@ -389,12 +389,12 @@ def level_fourth_first(player):
         elif x == 1:
             print('\nYou choose the right path and start walking')
             treasure(player)
-            
+
         elif x == 2:
             restart_quit_game()
 
 
-######## level 4 second encounter ########
+# level 4 second encounter
 def level_fourth_second(player):
     """Level 4 second choice from the left"""
     print("""
@@ -413,16 +413,16 @@ def level_fourth_second(player):
 #####################################################
 If you want to [restart] or [quit] type that.
 """)
-    
+
     # Generate random numbers and operation
     num1 = random.randint(1, 400)
     num2 = random.randint(1, 400)
     num3 = random.randint(1, 20)
     num4 = random.randint(1, 20)
-    
+
     # Randomly choose an operation
     operation = random.choice(['+', '-', '*'])
-    
+
     if operation == '+':
         correct_answer = num1 + num2
         question = f"What is the sum of {num1} + {num2}?\n>"
@@ -474,34 +474,34 @@ If you want to [restart] or [quit] type that.
             level_five_first(player)
 
 
-######## level 4 third encounter ########
+# level 4 third encounter
 def level_fourth_third(player):
     texts = [
-"######################################################",
-"# Upon an ornate bed adorned with silken drapes      #",
-"# and glistening jewels, lies a Sleeping Beauty,     #",
-"# countenance serene in the undisturbed embrace      #",
-"# of a magical slumber. The soft glow of moonlight   #",
-"# bathes the room, casting an ethereal aura.         #",
-"# A delicate sign placed near the bed bears          #",
-"# testament to a haunting curse, telling of a deep   #",
-"# enchantment that has plunged the beauty into an    #",
-"# unending sleep. The words reveal the only          #",
-"# antidote to this magical malady—a kiss of true     #",
-"# love, a remedy whispered through the ages.         #",
-"# The inscription delicately details the nature of   #",
-"# the curse, describing the beauty's repose as a     #",
-"# consequence of a malevolent spell woven by dark    #",
-"# forces. Only the touch of an authentic love, pure  #",
-"# and genuine, possesses the power to break the      #",
-"# spell, rousing the sleeping maiden from bewitched  #",
-"# dreams. As the moonlight weaves through the        #",
-"# tapestries, the room remains suspended in a        #",
-"# timeless hush, waiting for the fateful moment when #",
-"# a lover's kiss shall dispel the enchantment and    #",
-"# awaken Sleeping Beauty to a world long yearned for.#",
-"######################################################"
-]
+        "######################################################",
+        "# Upon an ornate bed adorned with silken drapes      #",
+        "# and glistening jewels, lies a Sleeping Beauty,     #",
+        "# countenance serene in the undisturbed embrace      #",
+        "# of a magical slumber. The soft glow of moonlight   #",
+        "# bathes the room, casting an ethereal aura.         #",
+        "# A delicate sign placed near the bed bears          #",
+        "# testament to a haunting curse, telling of a deep   #",
+        "# enchantment that has plunged the beauty into an    #",
+        "# unending sleep. The words reveal the only          #",
+        "# antidote to this magical malady—a kiss of true     #",
+        "# love, a remedy whispered through the ages.         #",
+        "# The inscription delicately details the nature of   #",
+        "# the curse, describing the beauty's repose as a     #",
+        "# consequence of a malevolent spell woven by dark    #",
+        "# forces. Only the touch of an authentic love, pure  #",
+        "# and genuine, possesses the power to break the      #",
+        "# spell, rousing the sleeping maiden from bewitched  #",
+        "# dreams. As the moonlight weaves through the        #",
+        "# tapestries, the room remains suspended in a        #",
+        "# timeless hush, waiting for the fateful moment when #",
+        "# a lover's kiss shall dispel the enchantment and    #",
+        "# awaken Sleeping Beauty to a world long yearned for.#",
+        "######################################################"
+    ]
     for text in texts:
         print(text)
         time.sleep(1)
@@ -516,25 +516,29 @@ def level_fourth_third(player):
             treasure(player)
         elif x == 1:
             text = [
-"###################################################################"
-"# As your lips meet those of Sleeping Beauty, a sudden tremor     #"
-"# reverberates through the room, and the world tilts on its axis. #"
-"# A disorienting daze envelops you as you collapse to the floor,  #"
-"# the taste of poison lingering on your lips. The air thickens    #"
-"# with malevolence, and mocking laughter echoes in your ears,     #"
-"# an insidious taunt from an unseen malefactor.                   #"
-"# The room blurs as the poison courses through your veins, and    #"
-"# the once-promised victory transforms into a bitter defeat.      #"
-"# In the fading consciousness, you discern the haunting echo of   #"
-"# the evil laughter, a cruel reminder of a trap intricately laid  #"
-"# and effortlessly sprung. As darkness claims your senses,        #"
-"# the last vestiges of awareness are consumed by the chilling     #"
-"# realization that, in the game of fate, you were but a pawn      #"
-"# manipulated by a malevolent force—a force that reveled in your  #"
-"# vulnerability and relished the simplicity with which it         #"
-"# tricked your noble intentions.                                  #"
-"###################################################################"
-]
+                "#####################################################"
+                "# As your lips meet those of Sleeping Beauty,       #"
+                "# a sudden tremorreverberates through the room,     #"
+                "# and the world tilts on its axis. A disorienting   #"
+                "# daze envelops you as you collapse to the floor,   #"
+                "# the taste of poison lingering on your lips.       #"
+                "# The air thickens with malevolence, and mocking    #"
+                "# laughter echoes in your ears, an insidious taunt  #"
+                "# from an unseen malefactor. The room blurs as the  #"
+                "# poison courses through your veins, and the        #"
+                "# once-promised victory transforms into a bitter    #"
+                "# defeat.In the fading consciousness, you discern   #"
+                "# the haunting echo of the evil laughter, a cruel   #"
+                "# reminder of a trap intricately laid and           #"
+                "# effortlessly sprung. As darkness claims your      #"
+                "# senses, the last vestiges of awareness are        #"
+                "# consumed by the chilling realization that, in     #"
+                "# the game of fate, you were but a pawn manipulated #"
+                "# by a malevolent force—a force that reveled in     #"
+                "# your vulnerability and relished the simplicity    #"
+                "# with which it tricked your noble intentions.      #"
+                "#####################################################"
+            ]
             for text in texts:
                 print(text)
                 time.sleep(1)
@@ -545,7 +549,7 @@ def level_fourth_third(player):
             restart_quit_game()
 
 
-######## level 5 encounter ########
+# level 5 encounter
 def level_five_first(player):
     """Level 5 'Boss fight'"""
     print(f"""{monster.black_dragon.description}\n""")
@@ -556,10 +560,7 @@ def level_five_first(player):
 ###############################
 # You survived the encountor! #
 ###############################""")
-    
-    
-    
-    
+
     path = ['Continue', 'Quit']
     path_menu = TerminalMenu(path)
 
@@ -580,7 +581,7 @@ def level_five_first(player):
             restart_quit_game()
 
 
-######## level 5 encounter ########
+# level 5 encounter
 def level_five_second(player):
     """Level 5 'Boss fight' with multiplyed attack"""
     print(f"""{monster.black_dragon.description}\n""")
@@ -591,7 +592,7 @@ def level_five_second(player):
 ###############################
 # You survived the encountor! #
 ###############################""")
-    
+
     path = ['Continue', 'Quit']
     path_menu = TerminalMenu(path)
 
@@ -642,6 +643,6 @@ def treasure(player):
 ###################### THE END ######################
 #####################################################
 #####################################################
-""")    
+""")
     time.sleep(10)
     os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)
