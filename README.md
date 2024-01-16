@@ -1,6 +1,6 @@
 # Dungeon-text-game
 
-![Responsive Mockup](documentation)
+![Responsive Mockup](documentation/all-devices-black.png)
 
 *The link to [Dungeon Text Game](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)*
 
