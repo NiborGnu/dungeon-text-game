@@ -629,18 +629,4 @@ def treasure(player):
 #####################################################
 #####################################################
 """)
-    options = ['Restart Game', 'Quit']
-    quit_menu = TerminalMenu(options)
-    x = quit_menu.show()
-
-    if x == 0:
-        os.execl(sys.executable, sys.executable, *sys.argv)
-
-    elif x == 1:
-        print(f"""
-#####################################
-# Thank you for playing my dungeon! #
-# See you on your next adventure!   #
-#####################################
-""")
-        end_of_game()
+    end_of_game()
