@@ -1,7 +1,5 @@
 import time
 import random
-import os
-import sys
 from os_sys_function import clear_screen, restart_quit_game, end_of_game
 from simple_term_menu import TerminalMenu
 from diceroll import dice_roll, dice_roll_2
@@ -20,10 +18,10 @@ def level_zero(player):
 ##############################################
 ##############################################
 # Which way will you go? [Left] or [Right]   #
-# Or will you [Quit] before entering!        #
+# Or will you [Restart/Quit] before entering!#
 ##############################################\n""")
 
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -54,7 +52,7 @@ def level_one_first(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -85,7 +83,7 @@ def level_one_second(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -116,7 +114,7 @@ def level_two_first(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -147,7 +145,7 @@ def level_two_second(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -178,7 +176,7 @@ def level_two_third(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -209,7 +207,7 @@ def level_three_first(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -240,7 +238,7 @@ def level_three_second(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -271,7 +269,7 @@ def level_three_third(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -302,7 +300,7 @@ def level_three_fourth(player):
 # And finds 2 more paths at the far end... #
 ############################################
 Now you stand before a choice again will you go [left] or [right]?\n""")
-    path = ['Left', 'Right', 'Quit']
+    path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -357,7 +355,7 @@ def level_fourth_first(player):
         print(text)
         time.sleep(1)
 
-    path = ['Take the offer', "Don't take the offer", 'Quit']
+    path = ['Take the offer', "Don't take the offer", 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -493,7 +491,7 @@ def level_fourth_third(player):
         print(text)
         time.sleep(1)
 
-    path = ['Kiss the Beauty', 'Walk away', 'Quit']
+    path = ['Kiss the Beauty', 'Walk away', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -547,7 +545,7 @@ def level_five_first(player):
 # You survived the encountor! #
 ###############################""")
 
-    path = ['Continue', 'Quit']
+    path = ['Continue', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
@@ -578,7 +576,7 @@ def level_five_second(player):
 # You survived the encountor! #
 ###############################""")
 
-    path = ['Continue', 'Quit']
+    path = ['Continue', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
