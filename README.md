@@ -2,7 +2,7 @@
 
 ![Responsive Mockup](documentation/all-devices-black.png)
 
-*The link to [Dungeon Text Game](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)*
+*The link to [Dungeon Text Game](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* #UPDATE LINK!
 
 Dungeon Text Game is a Python terminal project whose primary purpose is to boost users' moods and provide various experiences.
 
@@ -14,7 +14,7 @@ Users can quickly learn the rules of the game and type any words according to th
 
 ## How to play:
 
-  1. Click this *[link](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* or copy this text: `https://dungeon-text-game-8f6df9144d01.herokuapp.com/` and paste it into your browser's address bar.
+  1. Click this *[link](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* #UPDATE LINK!or copy this text: `https://dungeon-text-game-8f6df9144d01.herokuapp.com/` #UPDATE LINK! and paste it into your browser's address bar.
   2. As the page is loaded, click 'Start Game' or 'How to play'.
   3. Introduce yourself to the program.
   4. Choose the difficulty.
@@ -22,7 +22,7 @@ Users can quickly learn the rules of the game and type any words according to th
   6. Play one more time and try to enter different choices to have a different outcome.
   7. As soon as you are sick and tired of the game, choose "Quit" and **send** the link to this program to your friends!
 
-  Link to the game: *https://dungeon-text-game-8f6df9144d01.herokuapp.com/*
+  Link to the game: *https://dungeon-text-game-8f6df9144d01.herokuapp.com/*#UPDATE LINK!
 
 ---
 ## User Stories
@@ -49,11 +49,12 @@ Users can quickly learn the rules of the game and type any words according to th
 
   - **When the user chooses 'How to play'.**
   - How to play:
-        1. Type the answer when asked a question. For example: name or number.
-        2. When you see a menu: Choose an option in menu by using keys [up] or [down] and [enter] to select that option.
-        3. Have fun!
+  
+      1. Type the answer when asked a question. For example: name or number.
+      2. When you see a menu: Choose an option in menu by using keys [up] or [down] and [enter] to select that option.
+      3. Have fun!
 
-        * Start Game(menu) - to start the game.
+      * Start Game(menu) - to start the game.
 
     ![loading Program](documentation)
 
@@ -62,22 +63,24 @@ Users can quickly learn the rules of the game and type any words according to th
 
   - **Then the user are asked what difficulty(menu) to play at.**
   - Difficultys menu: 
-        * Easy 100 health points.
-        * Normal 50 health points.
-        * Hard 25 health points.
+
+      * Easy 100 health points.
+      * Normal 50 health points.
+      * Hard 25 health points.
 
     ![loading Program](documentation)
 
   - **Then the user gets welcome text with name and a choocie(menu)**
-  - Shows the terminal menu with two options:
 
-    1. Left - Take left choice
-    2. Right - Take right choice
-    3. Restart/Quit 
-      - The program will show the sub-menu with the following options to choose from:
-        1. Restart Game. - Restart game.
-        2. Quit - End game.
-        3. Back - Go back to left/right choice.(Option don't show if dead or reached the last function)
+  - Shows the terminal menu with two options:
+  
+      1. Left - Take left choice
+      2. Right - Take right choice
+      3. Restart/Quit 
+        - The program will show the sub-menu with the following options to choose from:
+          1. Restart Game. - Restart game.
+          2. Quit - End game.
+          3. Back - Go back to left/right choice.(Option don't show if dead or reached the last function)
 
       ![loading Program](documentation)
 
@@ -106,38 +109,63 @@ Users can quickly learn the rules of the game and type any words according to th
 
   The user will see a goodbye message, and the program will be stopped.
 
-  ![loading Program](documentation/features/goodbye_message.png)
+  ![loading Program](documentation)
 
 ---
 
+## Technologies Used
 
+### Languages:
 
+- [Python 3.8.5](https://www.python.org/downloads/release/python-385/): used to anchor the project and direct all application behavior
 
+- [JavaScript](https://www.javascript.com/): used to provide the start script needed to run the Code Institute mock terminal in the browser
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) used to construct the elements involved in building the mock terminal in the browser
 
+### Frameworks/Libraries, Programmes and Tools:
+#### Python modules/packages:
 
+##### Standard library imports:
 
+- [random](https://docs.python.org/3/library/random.html) was used to implement pseudo-random number generation.
+- [os](https://docs.python.org/3/library/os.html ) was used to clear the terminal before running the program and some functions.
+- [sys](https://docs.python.org/3/library/sys.html) was used to make exit and restart terminal.
+##### Third-party imports:
 
+- [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
 
+#### Other tools:
 
-
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [Photoshop](https://www.adobe.com/se/products/photoshop.html) was used to make and resize images for the README file.
+- [miro.com](https://www.miro.com/) was used to make a flowchart for the README file.
+- [heroku.com](https://heroku.com/) was used to deploy the project.
 
 
 ---
 
-BUGGS
-1. Bugg: Function difficulty did not work
-    Solved: "()" after lower in the input line: "input('>').lower"()""
+**Solved bugs**
 
-2. Bugg: Game did not find player value
-    Solved: moved player_name = get_player_name()
-            player_hp = difficulty()
-            player = Player(player_name, player_hp)
-            out of game function
+1. Function difficulty did not work
+    
+    *Solutions:* add "()" after lower in the input line: "input('>').lower"()"".
 
-3. Bugg: Error in code from diceroll.py
-    Solved: deleted 4 spaces so "print" was on the right line
+2. Game did not find player value
+    
+    *Solutions:* moved "player_name = get_player_name(), player_hp = difficulty(), player = Player(player_name, player_hp)" to main_game function so it was called in the right order.
 
+3. Error in code from diceroll.py
+    
+    *Solutions:* deleted 4 spaces so "print(f"""Lets [roll] the dice and kill the {monster.name}, or to end the game [Restart]/[Quit]\n""")" was on the right line.
+
+
+4. Restart function did not work correctly 
+code line: "os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)"
+    
+    *Solutions:* change the line "os.path.abspath("run.py")" to "sys.executable". Bugg came because simple_term_menu and os/sys inteference with each other somehow. 
 
 ---
 
