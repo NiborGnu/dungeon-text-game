@@ -1,6 +1,6 @@
 import time
 import random
-from os_sys_function import clear_screen, restart_quit_game, end_of_game
+from os_interaction import clear_screen, restart_quit_game, end_of_game
 from simple_term_menu import TerminalMenu
 from diceroll import dice_roll, dice_roll_2
 import monster
