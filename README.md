@@ -288,18 +288,12 @@ Create a local copy of the GitHub repository by following one of the two process
 
       - ![View Button](documentation/deployment/view_app.png)
 
+---
+## Credits
 
+- Color formatting: [Colorama](https://pypi.org/project/colorama/).
+- Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
+- [heroku.com](https://heroku.com/) for hosting the application.
+- The code for [clean_screen](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) function obs! the answer from poke.
 
-
-
-
-
-
-
-
-
-
-Took code to "clean screen" from
-https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-
-poke answer.
+---
