@@ -205,27 +205,6 @@ Create a local copy of the GitHub repository by following one of the two process
   1. Run the following command
   - `git clone https://github.com/NiborGnu/dungeon-text-game.git`
 
-- Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
-
-  [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/NiborGnu/dungeon-text-game)
-
-  1. Install Python module dependencies:
-     
-      1. Navigate to the folder madlib_with_python by executing the command:
-      - `cd madlib_with_python`
-      1. Run the command pip install -r requirements.txt
-        - `pip3 install -r requirements.txt`
-      1. *Note:* If you are located in China ![China](https://www.countryflags.io/cn/flat/32.png) or any other country with restricted internet access, you may need to add the following code in order to be able to use the nltk package.
-      
-       - For example:
-
-        ```python
-        nltk.set_proxy('127.0.0.1:41091')
-        ```
-      - To set the proxy, you need to open setting in preferred VPN, find Server address and HTTP/HTTPS Proxy Port joining them by colons as it is shown in the example above:
-      ![Settings VPN](documentation/deployment/settings_vpn.png)
-
-
 ### To deploy the project to Heroku so it can be run as a remote web application:
 - Clone the repository:
   1. Open a folder on your computer with the terminal.
