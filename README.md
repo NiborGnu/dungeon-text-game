@@ -2,14 +2,17 @@
 
 ![Responsive Mockup](documentation/features/all-devices-black.png)
 
-*The link to [Dungeon Text Game](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* #UPDATE LINK!
+## Overview
 
-Dungeon Text Game is a Python terminal project whose primary purpose is to boost users' moods and provide various experiences.
+Dungeon Text Game is a Python terminal project designed to offer an engaging and entertaining experience while also serving as a platform for decision-making practice. The primary goal is to boost users' moods through an interactive game with various story outcomes.
 
-Secondarily, it may help users to practice decision-making.
+## Purpose
 
-Users can quickly learn the rules of the game and type any words according to the provided instructions. In the end, they will receive a story from the choices of the user.
+The project aims to achieve the following objectives:
 
+1. **User Engagement:** Provide users with an enjoyable and interactive text-based gaming experience.
+2. **Decision-Making Practice:** Allow users to practice decision-making skills through the choices presented in the game.
+3. **Ease of Use:** Ensure that the game is easy to understand, navigate, and play.
 ---
 
 ## How to play:
@@ -258,7 +261,6 @@ Create a local copy of the GitHub repository by following one of the two process
 ---
 ## Credits
 
-- Color formatting: [Colorama](https://pypi.org/project/colorama/).
 - Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
 - [heroku.com](https://heroku.com/) for hosting the application.
 - The code for [clean_screen](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) function obs! the answer from poke.
