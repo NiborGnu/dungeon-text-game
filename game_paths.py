@@ -73,8 +73,8 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 def level_one_second(player):
     """Level 1 second choice from the left"""
-    print(f"{monster.ork.description}\n")
-    dice_roll(player, monster.ork)
+    print(f"{monster.orc.description}\n")
+    dice_roll(player, monster.orc)
 
     if player.hp >= 0:
         print("""
@@ -104,8 +104,8 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 def level_two_first(player):
     """Level 2 first choice from the left"""
-    print(f"{monster.ork.description}\n")
-    dice_roll(player, monster.ork)
+    print(f"{monster.orc.description}\n")
+    dice_roll(player, monster.orc)
 
     if player.hp >= 0:
         print("""

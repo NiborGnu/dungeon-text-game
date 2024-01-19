@@ -24,8 +24,8 @@ goblin = Monster(
     5
 )
 
-ork = Monster(
-    "Ork",
+orc = Monster(
+    "Orc",
     """
 ###########################################
 # You enter a cave and you see a towering #
