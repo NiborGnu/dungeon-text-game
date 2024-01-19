@@ -1,6 +1,6 @@
 from os_interaction import clear_screen
 from simple_term_menu import TerminalMenu
-from paths import level_zero
+from game_paths import level_zero
 from player import Player, get_player_name, difficulty
 
 
