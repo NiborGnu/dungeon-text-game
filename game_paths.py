@@ -30,12 +30,10 @@ def level_zero(player):
             clear_screen()
             print('\nYou choose the left path and start walking')
             level_one_first(player)
-            # level 2 path
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
             level_one_second(player)
-            # level 2 path
         elif x == 2:
             restart_quit_game()
 
@@ -60,12 +58,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 2 path
             level_two_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 2 path
             level_two_second(player)
         elif x == 2:
             restart_quit_game()
@@ -91,12 +87,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 2 path
             level_two_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 2 path
             level_two_third(player)
         elif x == 2:
             restart_quit_game()
@@ -122,12 +116,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 3 path
             level_three_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 3 path
             level_three_second(player)
         elif x == 2:
             restart_quit_game()
@@ -153,12 +145,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 3 path
             level_three_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 3 path
             level_three_third(player)
         elif x == 2:
             restart_quit_game()
@@ -184,12 +174,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 3 path
             level_three_third(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 3 path
             level_three_fourth(player)
         elif x == 2:
             restart_quit_game()
@@ -215,12 +203,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 4 path
             level_fourth_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 4 path
             level_fourth_second(player)
         elif x == 2:
             restart_quit_game()
@@ -246,12 +232,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 4 path
             level_fourth_first(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 4 path
             level_fourth_second(player)
         elif x == 2:
             restart_quit_game()
@@ -277,12 +261,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 4 path
             level_fourth_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 4 path
             level_fourth_third(player)
         elif x == 2:
             restart_quit_game()
@@ -308,12 +290,10 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
         if x == 0:
             clear_screen()
             print('\nYou choose the left path and start walking')
-            # level 4 path
             level_fourth_second(player)
         elif x == 1:
             clear_screen()
             print('\nYou choose the right path and start walking')
-            # level 4 path
             level_fourth_third(player)
         elif x == 2:
             restart_quit_game()
