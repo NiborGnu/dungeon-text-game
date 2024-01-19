@@ -369,6 +369,8 @@ def level_fourth_first(player):
 # your memory is the wizard's sinister smile.    #
 # You've fallen victim to a cunning trick!       #
 ##################################################
+
+Processing ...
 """)
             time.sleep(10)
             level_zero(player)
@@ -396,6 +398,7 @@ def level_fourth_second(player):
 # mathematics? If so, prove your prowess, and the   #
 # riches shall be yours.                            #
 #####################################################
+
 If you want to [restart] or [quit] type that.
 """)
 
@@ -497,7 +500,23 @@ def level_fourth_third(player):
     while True:
         x = path_menu.show()
         if x == 0:
-            print('You walk past and glanse back and see a horror')
+            text = [
+                "#####################################################"
+                "# As you walk away, a sudden chill crawls up your   #",
+                "# spine. Glancing back, you witness a horrifying    #",
+                "# transformation the once beautiful Sleeping Beauty #",
+                "# contorts into a slimy, poisonous creature. The    #",
+                "# room echoes with malevolent hisses as the entity  #",
+                "# writhes in the throes of its monstrous form. A    #",
+                "# cautionary shiver runs down your spine, serving   #",
+                "# as a chilling reminder of the dangers concealed   #",
+                "# in the dungeon's depths.                          #",
+                "#####################################################"
+            ]
+            for text in texts:
+                print(text)
+                time.sleep(1)
+            time.sleep(10)
             treasure(player)
         elif x == 1:
             text = [
@@ -554,14 +573,6 @@ def level_five_first(player):
             print('Walk away and see a opening and continu that way')
             treasure(player)
         elif x == 1:
-            clear_screen()
-            print("""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
             restart_quit_game()
 
 
@@ -585,41 +596,34 @@ def level_five_second(player):
             print('Walk away and see a opening and continu that way')
             treasure(player)
         elif x == 1:
-            clear_screen()
-            print("""
-#####################################
-# Thank you for playing my dungeon! #
-#  See you on your next adventure!  #
-#####################################
-""")
-            time.sleep(10)
             restart_quit_game()
 
 
 def treasure(player):
     """End of Game"""
-    print("""
-#####################################################
-# You follow the path, and just as doubt creeps     #
-# in about continuing forward, a breathtaking       #
-# sight unfolds before you – a treasure so abundant #
-# it seems surreal. The glittering riches and       #
-# artifacts strewn across the chamber leave you     #
-# in awe, making you question whether such a        #
-# discovery is even possible.                       #
-#                                                   #
-# As you marvel at the bounty, you notice an        #
-# ancient portal tucked away in the corner.         #
-# Its shimmering energy suggests a way out of       #
-# the dungeon, providing a tempting opportunity     #
-# to secure your newfound treasures and escape      #
-# the perilous depths. The decision now lies        #
-# with you – continue exploring the riches, or      #
-# step through the portal and exit the dungeon.     #
-# The path to your destiny awaits.                  #
-#####################################################
+    print(f"""
+###################################################
+# You follow the path, and just as doubt creeps   #
+# in about continuing forward, a breathtaking     #
+# sight unfolds before you a treasure so abundant #
+# it seems surreal. The glittering riches and     #
+# artifacts strewn across the chamber leave you   #
+# in awe, making you question whether such a      #
+# discovery is even possible.                     #
+#                                                 #
+# As you marvel at the bounty, you notice an      #
+# ancient portal tucked away in the corner.       #
+# Its shimmering energy suggests a way out of     #
+# the dungeon, providing a tempting opportunity   #
+# to secure your newfound treasures and escape    #
+# the perilous depths. The decision now lies      #
+# with you continue exploring the riches, or      #
+# step through the portal and exit the dungeon.   #
+# The path to your destiny awaits.                #
+###################################################\n
+Processing ...
 """)
-    time.sleep(5)
+    time.sleep(25)
     print("""
 #####################################################
 #####################################################
