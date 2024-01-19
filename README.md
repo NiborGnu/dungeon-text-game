@@ -17,7 +17,7 @@ The project aims to achieve the following objectives:
 
 ## How to play:
 
-  1. Click this *[link](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* #UPDATE LINK! or copy this text: `https://dungeon-text-game-8f6df9144d01.herokuapp.com/` #UPDATE LINK! and paste it into your browser's address bar.
+  1. Click this *[link](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* or copy this text: `https://dungeon-text-game-8f6df9144d01.herokuapp.com/` and paste it into your browser's address bar.
   2. As the page is loaded, click 'Start Game' or 'How to play'.
   3. Introduce yourself to the program.
   4. Choose the difficulty.
@@ -25,7 +25,7 @@ The project aims to achieve the following objectives:
   6. Play one more time and try to enter different choices to have a different outcome.
   7. As soon as you are sick and tired of the game, choose "Quit" and **send** the link to this program to your friends!
 
-  Link to the game: *https://dungeon-text-game-8f6df9144d01.herokuapp.com/*#UPDATE LINK!
+  Link to the game: *https://dungeon-text-game-8f6df9144d01.herokuapp.com/*
 
 ---
 ## User Stories
@@ -147,17 +147,18 @@ The project aims to achieve the following objectives:
 **Solved bugs**
 
 1. Function difficulty did not work
-    *Solutions:* add "()" after lower in the input line: "input('>').lower"()"".
+    * *Solutions:* add "()" after lower in the input line: "input('>').lower"()"".
 
 2. The Game did not find player value
-    *Solutions:* moved "player_name = get_player_name(), player_hp = difficulty(), player = Player(player_name, player_hp)" to main_game function so it was called in the right order.
+    * *Solutions:* moved "player_name = get_player_name(), player_hp = difficulty(), player = Player(player_name, player_hp)" to main_game function so it was called in the right order.
 
 3. Error in code from diceroll.py
-    *Solutions:* deleted 4 spaces so "print(f"""Lets [roll] the dice and kill the {monster.name}, or to end the game [Restart]/[Quit]\n""")" was on the right line.
+    * *Solutions:* deleted 4 spaces so "print(f"""Lets [roll] the dice and kill the {monster.name}, or to end the game [Restart]/[Quit]\n""")" was on the right line.
 
 4. Restart function did not work correctly 
 code line: "os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)"
-    *Solutions:* change the line "os.path.abspath("run.py")" to "sys.executable". Bugg came because simple_term_menu and os/sys inteference with each other somehow. 
+    * *Solutions:* change the line "os.path.abspath("run.py")" to "sys.executable". 
+    * Bugg came because simple_term_menu and os/sys inteference with each other somehow. 
 
 **Unsolved bugs**
 
@@ -263,6 +264,6 @@ Create a local copy of the GitHub repository by following one of the two process
 
 - Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
 - [heroku.com](https://heroku.com/) for hosting the application.
-- The code for [clean_screen](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) function obs! the answer from poke.
+- The code for [clean_screen](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) function. OBS! The answer from **poke** is where I found the code. OBS!
 
 ---
