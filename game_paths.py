@@ -44,12 +44,11 @@ def level_one_first(player):
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -74,12 +73,11 @@ def level_one_second(player):
     dice_roll(player, monster.orc)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -104,12 +102,11 @@ def level_two_first(player):
     dice_roll(player, monster.orc)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -134,12 +131,11 @@ def level_two_second(player):
     dice_roll(player, monster.murloc)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -164,12 +160,11 @@ def level_two_third(player):
     dice_roll(player, monster.goblin)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -194,12 +189,11 @@ def level_three_first(player):
     dice_roll(player, monster.wyvern)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -224,12 +218,11 @@ def level_three_second(player):
     dice_roll(player, monster.forest_troll)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -254,12 +247,11 @@ def level_three_third(player):
     dice_roll(player, monster.cave_troll)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -284,12 +276,11 @@ def level_three_fourth(player):
     dice_roll(player, monster.basilisk)
 
     if player.hp >= 0:
-        print("""
+        print(f"""
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################
-
+############################################\n
 Now you stand before a choice again will you go [left] or [right]?\n""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
