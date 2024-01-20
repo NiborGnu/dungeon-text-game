@@ -1,7 +1,7 @@
 import random
 from time import sleep
-from os_interaction import restart_quit_game, end_of_game
 from simple_term_menu import TerminalMenu
+from os_interaction import restart_quit_game, end_of_game
 
 
 def dice_roll(player, monster):
