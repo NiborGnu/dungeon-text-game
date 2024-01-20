@@ -107,6 +107,13 @@ The project aims to achieve the following objectives:
     
     ![loading Program](documentation/features/restart-quit.png)
 
+---
+
+## Flowchart
+
+The flowchart represents the logic of the application:
+
+  ![Flash Card Page](documentation/flowchart/game-flow-chart.png)
 
 ---
 
