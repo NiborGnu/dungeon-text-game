@@ -607,7 +607,8 @@ def level_five_second(player):
 
 
 def treasure(player):
-    """End of Game"""
+    """Discover an abundance of treasures and face the
+ultimate decision at the end of the game."""
     print(f"""
 ###################################################
 # You follow the path, and just as doubt creeps   #
