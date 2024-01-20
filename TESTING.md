@@ -40,4 +40,5 @@ No errors were found:
 
 I want to give a warning that:
 The validator may show that there is a missing line at the end of the code in some files
-and that GitHub does not show the last empty lines in all files.
+and that GitHub does not show the last empty lines in all files. 
+BUT EACH FILE HAVE A EMPTY LINE AT THE END.
