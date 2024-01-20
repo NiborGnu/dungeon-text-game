@@ -91,7 +91,7 @@ The project aims to achieve the following objectives:
 
   - **When the user chose 'left'**
   - Show text explaining the user 'start walking left' then coming to a room/cave and a monster is waiting there. 
-  - Show description of the cave and monster
+  - Show a description of the cave and monster
   - A battle choice [roll] to attack or [Restart/Quit] to end the game
     
     1. roll:
@@ -162,7 +162,7 @@ The flowchart represents the logic of the application:
 3. Error in code from diceroll.py
     * *Solutions:* deleted 4 spaces so "print(f"""Lets [roll] the dice and kill the {monster.name}, or to end the game [Restart]/[Quit]\n""")" was on the right line.
 
-4. Restart function did not work correctly 
+4. The restart function did not work correctly 
 code line: "os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)"
     * *Solutions:* change the line "os.path.abspath("run.py")" to "sys.executable". 
     * Bugg came because simple_term_menu and os/sys inteference with each other somehow. 
