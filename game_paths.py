@@ -19,7 +19,8 @@ def level_zero(player):
 ##############################################
 # Which way will you go? [Left] or [Right]   #
 # Or will you [Restart/Quit] before entering!#
-##############################################\n""")
+##############################################
+""")
 
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
@@ -48,8 +49,10 @@ def level_one_first(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -77,8 +80,10 @@ def level_one_second(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -106,8 +111,10 @@ def level_two_first(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -135,8 +142,10 @@ def level_two_second(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -164,8 +173,10 @@ def level_two_third(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -193,8 +204,10 @@ def level_three_first(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -222,8 +235,10 @@ def level_three_second(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -251,8 +266,10 @@ def level_three_third(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -280,8 +297,10 @@ def level_three_fourth(player):
 ############################################
 # You survived the encounter!              #
 # And finds 2 more paths at the far end... #
-############################################\n
-Now you stand before a choice again will you go [left] or [right]?\n""")
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
     path = ['Left', 'Right', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
@@ -608,7 +627,8 @@ def treasure(player):
 # with you continue exploring the riches, or      #
 # step through the portal and exit the dungeon.   #
 # The path to your destiny awaits.                #
-###################################################\n
+###################################################
+
 Processing ...
 """)
     time.sleep(10)
