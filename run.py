@@ -5,6 +5,7 @@ from player import Player, get_player_name, difficulty
 
 
 def main():
+    """Embark on a perilous dungeon adventure."""
     clear_screen()
     print("""
 ####################################

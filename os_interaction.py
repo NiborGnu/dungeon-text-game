@@ -9,7 +9,7 @@ def clear_screen():
 
 
 def restart_quit_game():
-    """Quit the game."""
+    """Quit or restart the game."""
     options = ['Restart Game', 'Quit', 'Back']
     quit_menu = TerminalMenu(options)
     x = quit_menu.show()
