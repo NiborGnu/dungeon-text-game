@@ -1,10 +1,15 @@
 # Dungeon-text-game
 
 ![Responsive Mockup](documentation/features/all-devices-black.png)
+Click this *[link](https://dungeon-text-game-8f6df9144d01.herokuapp.com/)* to get to the game
+
+---
 
 ## Overview
 
 Dungeon Text Game is a Python terminal project designed to offer an engaging and entertaining experience while also serving as a platform for decision-making practice. The primary goal is to boost users' moods through an interactive game with various story outcomes.
+
+---
 
 ## Purpose
 
@@ -13,6 +18,7 @@ The project aims to achieve the following objectives:
 1. **User Engagement:** Provide users with an enjoyable and interactive text-based gaming experience.
 2. **Decision-Making Practice:** Allow users to practice decision-making skills through the choices presented in the game.
 3. **Ease of Use:** Ensure that the game is easy to understand, navigate, and play.
+
 ---
 
 ## How to play:
@@ -151,21 +157,41 @@ The flowchart represents the logic of the application:
 
 ---
 
-**Solved bugs**
+## Solved bugs
 
 1. Function difficulty did not work
-    * *Solutions:* add "()" after lower in the input line: "input('>').lower"()"".
 
+    *Solutions*: add "()" after lower in the input line: `input('>').lower()`.
 2. The Game did not find player value
-    * *Solutions:* moved "player_name = get_player_name(), player_hp = difficulty(), player = Player(player_name, player_hp)" to main_game function so it was called in the right order.
+
+    *Solutions*: moved 
+
+    ```python
+    player_name = get_player_name(),
+    player_hp = difficulty(),
+    player = Player(player_name, player_hp)
+    ```
+
+    to `main_game` function so it was called in the right order.
 
 3. Error in code from diceroll.py
-    * *Solutions:* deleted 4 spaces so "print(f"""Lets [roll] the dice and kill the {monster.name}, or to end the game [Restart]/[Quit]\n""")" was on the right line.
+    
+    *Solutions:* deleted 4 spaces so 
 
-4. The restart function did not work correctly 
-code line: "os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)"
-    * *Solutions:* change the line "os.path.abspath("run.py")" to "sys.executable". 
-    * Bugg came because simple_term_menu and os/sys inteference with each other somehow. 
+    `print(f"""Lets [roll] the dice and kill the {monster.name}, 
+    or to end the game [Restart]/[Quit]\n""")`
+    
+    was on the right line.
+
+4. The restart function did not work correctly,
+
+    code line: `os.execl(sys.executable, os.path.abspath("run.py"), *sys.argv)`
+    
+    *Solutions:* change the line 
+    `os.path.abspath("run.py")` 
+    to `sys.executable`
+
+    * Bugg came because simple_term_menu and os/sys interfered with each other somehow. 
 
 **Unsolved bugs**
 
@@ -210,7 +236,14 @@ Create a local copy of the GitHub repository by following one of the two process
   1. Run the following command
   - `git clone https://github.com/NiborGnu/dungeon-text-game.git`
 
-  1. Create your own GitHub repository to host the code.
+  1. Install Python module dependencies:
+     
+      1. Navigate to the folder dungeon_text_game by executing the command:
+      - `cd dungeon_text_game`
+      1. Run the command pip install -r requirements.txt
+        - `pip3 install -r requirements.txt`
+
+  1. Create your own GitHub repository to host the code. 
   1. Run the command `git remote set-url origin <Your GitHub Repo Path>` to set the remote repository location to your repository.
 
   1. Push the files to your repository with the following command:
@@ -267,9 +300,11 @@ Create a local copy of the GitHub repository by following one of the two process
       - ![View Button](documentation/deployment/view_app.png)
 
 ---
-## Credits
 
+## Credits
+- The text in the game is all made up by myself.
 - Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
+- Thank [Code Institute](https://learn.codeinstitute.net/) for all the nice tutorials and tips. And for giving Heroku time.
 - [heroku.com](https://heroku.com/) for hosting the application.
 - The code for [clean_screen](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) function. OBS! The answer from **poke** is where I found the code. OBS!
 
