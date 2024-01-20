@@ -7,7 +7,7 @@ import monster
 
 
 def level_zero(player):
-    """Dungeon entrance"""
+    """Initiates dungeon entry, welcomes player, and prompts path choice."""
     clear_screen()
     print(f"""
 ##############################################
@@ -39,7 +39,7 @@ def level_zero(player):
 
 
 def level_one_first(player):
-    """Level 1 first choice from the left"""
+    """Encounter goblin, fight and survive. Choose new path"""
     print(f"{monster.goblin.description}\n")
     dice_roll(player, monster.goblin)
 
@@ -68,7 +68,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_one_second(player):
-    """Level 1 second choice from the left"""
+    """Encounter orc, fight and survive. Choose new path"""
     print(f"{monster.orc.description}\n")
     dice_roll(player, monster.orc)
 
@@ -97,7 +97,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_two_first(player):
-    """Level 2 first choice from the left"""
+    """Encounter orc, fight and survive. Choose new path"""
     print(f"{monster.orc.description}\n")
     dice_roll(player, monster.orc)
 
@@ -126,7 +126,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_two_second(player):
-    """Level 2 second choice from the left"""
+    """Encounter murloc, fight and survive. Choose new path"""
     print(f"{monster.murloc.description}\n")
     dice_roll(player, monster.murloc)
 
@@ -155,7 +155,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_two_third(player):
-    """Level 2 third choice from the left"""
+    """Encounter goblin, fight and survive. Choose new path"""
     print(f"{monster.goblin.description}\n")
     dice_roll(player, monster.goblin)
 
@@ -184,7 +184,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_three_first(player):
-    """Level 3 first choice from the left"""
+    """Encounter wyvern, fight and survive. Choose new path"""
     print(f"{monster.wyvern.description}\n")
     dice_roll(player, monster.wyvern)
 
@@ -213,7 +213,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_three_second(player):
-    """Level 3 second choice from the left"""
+    """Encounter forest troll, fight and survive. Choose new path"""
     print(f"""{monster.forest_troll.description}\n""")
     dice_roll(player, monster.forest_troll)
 
@@ -242,7 +242,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_three_third(player):
-    """Level 3 third choice from the left"""
+    """Encounter cave troll, fight and survive. Choose new path"""
     print(f"""{monster.cave_troll.description}\n""")
     dice_roll(player, monster.cave_troll)
 
@@ -271,7 +271,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_three_fourth(player):
-    """Level 3 fourth choice from the left"""
+    """Encounter basilisk, fight and survive. Choose new path"""
     print(f"{monster.basilisk.description}\n")
     dice_roll(player, monster.basilisk)
 
@@ -300,7 +300,7 @@ Now you stand before a choice again will you go [left] or [right]?\n""")
 
 
 def level_fourth_first(player):
-    """Level 4 first choice from the left"""
+    """Encounter wizard in library with a tempting offer."""
     texts = [
         "#############################################",
         "# In the depths of the dungeon, the path    #",
@@ -331,6 +331,7 @@ def level_fourth_first(player):
         "# room of books. What choice will you make? #",
         "#############################################"
     ]
+    # To long text so showing 1 line at a time with 1 sec between lines
     for text in texts:
         print(text)
         time.sleep(1)
@@ -363,7 +364,7 @@ Processing ...
 
 
 def level_fourth_second(player):
-    """Level 4 second choice from the left"""
+    """Encounter a mathematical challenge from a dryad in a serene clearing."""
     print("""
 #####################################################
 # The path transitions into a lush greenery, and    #
@@ -391,6 +392,7 @@ If you want to [restart] or [quit] type that.
     # Randomly choose an operation
     operation = random.choice(['+', '-', '*'])
 
+    # Generate question with +, - or *
     if operation == '+':
         correct_answer = num1 + num2
         question = f"What is the sum of {num1} + {num2}?\n>"
@@ -404,6 +406,7 @@ If you want to [restart] or [quit] type that.
     while True:
         check = input(question)
 
+        # Handle restart and quit options
         if check.lower() == 'restart' or check.lower() == 'quit':
             restart_quit_game()
 
@@ -413,6 +416,7 @@ If you want to [restart] or [quit] type that.
             print('Invalid input. Please enter a number.')
             continue
 
+        # Check the correctness of the answer
         if answer == correct_answer:
             print("""
 ##############################################################
@@ -443,7 +447,8 @@ If you want to [restart] or [quit] type that.
 
 
 def level_fourth_third(player):
-    """Level 4 third choice from the left"""
+    """Encounter a Sleeping Beauty under a magical slumber;
+face a consequential choice."""
     texts = [
         "######################################################",
         "# Upon an ornate bed adorned with silken drapes      #",
@@ -470,6 +475,7 @@ def level_fourth_third(player):
         "# awaken Sleeping Beauty to a world long yearned for.#",
         "######################################################"
     ]
+    # To long text so showing 1 line at a time with 1 sec between lines
     for text in texts:
         print(text)
         time.sleep(1)
@@ -493,10 +499,11 @@ def level_fourth_third(player):
                 "# in the dungeon's depths.                          #",
                 "#####################################################"
             ]
+            # To long text so showing 1 line at a time with 1 sec between lines
             for text in texts:
                 print(text)
                 time.sleep(1)
-            time.sleep(10)
+            time.sleep(5)
             treasure(player)
         elif x == 1:
             text = [
@@ -523,18 +530,19 @@ def level_fourth_third(player):
                 "# with which it tricked your noble intentions.      #"
                 "#####################################################"
             ]
+            # To long text so showing 1 line at a time with 1 sec between lines
             for text in texts:
                 print(text)
                 time.sleep(1)
-            time.sleep(10)
-            restart_quit_game()
+            time.sleep(5)
+            end_of_game()
 
         elif x == 2:
             restart_quit_game()
 
 
 def level_five_first(player):
-    """Level 5 Boss fight"""
+    """Face a Black Dragon in a thrilling boss fight."""
     print(f"""{monster.black_dragon.description}\n""")
     dice_roll(player, monster.black_dragon)
 
@@ -557,7 +565,7 @@ def level_five_first(player):
 
 
 def level_five_second(player):
-    """Level 5 Boss fight with multiplyed attack"""
+    """Face a Black Dragon in a thrilling boss fight. With dubbel attack"""
     print(f"""{monster.black_dragon.description}\n""")
     dice_roll_2(player, monster.black_dragon)
 
@@ -603,7 +611,7 @@ def treasure(player):
 ###################################################\n
 Processing ...
 """)
-    time.sleep(25)
+    time.sleep(10)
     print("""
 #####################################################
 #####################################################
