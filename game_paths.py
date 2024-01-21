@@ -499,14 +499,14 @@ face a consequential choice."""
         print(text)
         time.sleep(1)
 
-    path = ['Kiss the Beauty', 'Walk away', 'Restart/Quit']
+    path = ['Walk away', 'Kiss the Beauty', 'Restart/Quit']
     path_menu = TerminalMenu(path)
 
     while True:
         x = path_menu.show()
         if x == 0:
-            text = [
-                "#####################################################"
+            walk_away_text = [
+                "#####################################################",
                 "# As you walk away, a sudden chill crawls up your   #",
                 "# spine. Glancing back, you witness a horrifying    #",
                 "# transformation the once beautiful Sleeping Beauty #",
@@ -519,39 +519,39 @@ face a consequential choice."""
                 "#####################################################"
             ]
             # To long text so showing 1 line at a time with 1 sec between lines
-            for text in texts:
-                print(text)
+            for line in walk_away_text:
+                print(line)
                 time.sleep(1)
             time.sleep(5)
             treasure(player)
         elif x == 1:
-            text = [
-                "#####################################################"
-                "# As your lips meet those of Sleeping Beauty,       #"
-                "# a sudden tremorreverberates through the room,     #"
-                "# and the world tilts on its axis. A disorienting   #"
-                "# daze envelops you as you collapse to the floor,   #"
-                "# the taste of poison lingering on your lips.       #"
-                "# The air thickens with malevolence, and mocking    #"
-                "# laughter echoes in your ears, an insidious taunt  #"
-                "# from an unseen malefactor. The room blurs as the  #"
-                "# poison courses through your veins, and the        #"
-                "# once-promised victory transforms into a bitter    #"
-                "# defeat.In the fading consciousness, you discern   #"
-                "# the haunting echo of the evil laughter, a cruel   #"
-                "# reminder of a trap intricately laid and           #"
-                "# effortlessly sprung. As darkness claims your      #"
-                "# senses, the last vestiges of awareness are        #"
-                "# consumed by the chilling realization that, in     #"
-                "# the game of fate, you were but a pawn manipulated #"
-                "# by a malevolent force—a force that reveled in     #"
-                "# your vulnerability and relished the simplicity    #"
-                "# with which it tricked your noble intentions.      #"
+            kiss_beauty_text = [
+                "#####################################################",
+                "# As your lips meet those of Sleeping Beauty,       #",
+                "# a sudden tremorreverberates through the room,     #",
+                "# and the world tilts on its axis. A disorienting   #",
+                "# daze envelops you as you collapse to the floor,   #",
+                "# the taste of poison lingering on your lips.       #",
+                "# The air thickens with malevolence, and mocking    #",
+                "# laughter echoes in your ears, an insidious taunt  #",
+                "# from an unseen malefactor. The room blurs as the  #",
+                "# poison courses through your veins, and the        #",
+                "# once-promised victory transforms into a bitter    #",
+                "# defeat.In the fading consciousness, you discern   #",
+                "# the haunting echo of the evil laughter, a cruel   #",
+                "# reminder of a trap intricately laid and           #",
+                "# effortlessly sprung. As darkness claims your      #",
+                "# senses, the last vestiges of awareness are        #",
+                "# consumed by the chilling realization that, in     #",
+                "# the game of fate, you were but a pawn manipulated #",
+                "# by a malevolent force—a force that reveled in     #",
+                "# your vulnerability and relished the simplicity    #",
+                "# with which it tricked your noble intentions.      #",
                 "#####################################################"
             ]
             # To long text so showing 1 line at a time with 1 sec between lines
-            for text in texts:
-                print(text)
+            for line in kiss_beauty_text:
+                print(line)
                 time.sleep(1)
             time.sleep(5)
             end_of_game()
