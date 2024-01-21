@@ -19,8 +19,7 @@ goblin = Monster(
 # with a crooked grin revealing jagged teeth and #
 # eyes gleaming with a mischievous glint!        #
 ################ It's a Goblin! ##################
-##################################################
-""",
+##################################################""",
     5
 )
 
@@ -115,7 +114,6 @@ black_dragon = Monster(
 # silhouette looms wrapped in midnight scales,      #
 # a force unmatched!                                #
 ############### It's a Black Dragon!! ###############
-#####################################################
-""",
+#####################################################""",
     10
 )
