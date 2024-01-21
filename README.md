@@ -193,6 +193,12 @@ The flowchart represents the logic of the application:
 
     * Bugg came because simple_term_menu and os/sys interfered with each other somehow. 
 
+5. Text in level_fourth_third beginning printed twice.
+
+    *Solutions:* Change the name of the options text:
+    to walk_away_text and kiss_beauty_text. And print(line) instead of text.
+
+
 **Unsolved bugs**
 
 - No unsolved bugs
