@@ -37,7 +37,7 @@ def difficulty():
 What difficulty do you crave, Warrior?\n
 Use arrows to navigate the Menu Up and Down.
 Enter to select\n""")
-    diff = ['Easy - 100 HP', 'Normal - 50 HP', 'Hard - 25 HP']
+    diff = ['Easy - 100 HP', 'Normal - 50 HP', 'Hard - 35 HP']
     difficulty_menu = TerminalMenu(diff)
     x = difficulty_menu.show()
 
