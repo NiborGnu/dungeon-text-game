@@ -1,3 +1,4 @@
+from time import sleep
 from simple_term_menu import TerminalMenu
 
 
@@ -42,11 +43,17 @@ Enter to select\n""")
     x = difficulty_menu.show()
 
     if x == 0:
-        print('Difficulty Easy - 100HP set\n')
+        print('Difficulty Easy - 100HP set')
+        print('Processing ...')
+        sleep(5)
         return 100
     elif x == 1:
-        print('Difficulty Normal - 50HP set\n')
+        print('Difficulty Normal - 50HP set')
+        print('Processing ...')
+        sleep(5)
         return 50
     elif x == 2:
-        print('Difficulty Hard - 35HP set\n')
+        print('Difficulty Hard - 35HP set')
+        print('Processing ...')
+        sleep(5)
         return 35
