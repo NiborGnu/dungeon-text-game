@@ -48,5 +48,5 @@ Enter to select\n""")
         print('Difficulty Normal - 50HP set\n')
         return 50
     elif x == 2:
-        print('Difficulty Hard - 25HP set\n')
-        return 25
+        print('Difficulty Hard - 35HP set\n')
+        return 35

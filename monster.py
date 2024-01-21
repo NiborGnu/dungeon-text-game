@@ -20,7 +20,7 @@ goblin = Monster(
 # eyes gleaming with a mischievous glint!        #
 ################ It's a Goblin! ##################
 ##################################################""",
-    5
+    8
 )
 
 orc = Monster(
@@ -32,7 +32,7 @@ orc = Monster(
 # its grizzled body marked with scars!    #
 ############## It's an Ork! ###############
 ###########################################""",
-    5
+    8
 )
 
 murloc = Monster(
@@ -45,7 +45,7 @@ murloc = Monster(
 # emitting gurgling sounds!                   #
 ############### It's a Murloc! ################
 ###############################################""",
-    5
+    8
 )
 
 cave_troll = Monster(
@@ -59,7 +59,7 @@ cave_troll = Monster(
 # its eyes glowing with a intensity!            #
 ############## It's a Cave Troll! ###############
 #################################################""",
-    5
+    13
 )
 
 forest_troll = Monster(
@@ -71,7 +71,7 @@ forest_troll = Monster(
 # its bark-like frame turns towards you!            #
 ############### It's a Forest Troll! ################
 #####################################################""",
-    5
+    13
 )
 
 basilisk = Monster(
@@ -85,7 +85,7 @@ basilisk = Monster(
 # emanating an aura of petrifying danger!       #
 ############### It's a Basilisk! ################
 #################################################""",
-    7
+    13
 )
 
 wyvern = Monster(
@@ -101,7 +101,7 @@ wyvern = Monster(
 # flight at the slightest provocation!              #
 ################## It's a Wyvern! ###################
 #####################################################""",
-    7
+    13
 )
 
 black_dragon = Monster(
@@ -115,5 +115,5 @@ black_dragon = Monster(
 # a force unmatched!                                #
 ############### It's a Black Dragon!! ###############
 #####################################################""",
-    10
+    20
 )
