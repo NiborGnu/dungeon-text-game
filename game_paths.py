@@ -260,6 +260,8 @@ If you want to [restart] or [quit] type that.
         correct_answer = num1 + num2
         question = f"What is the sum of {num1} + {num2}?\n>"
     elif operation == '-':
+        # Make sure the bigger number is presented first
+        num1, num2 = max(num1, num2), min(num1, num2)
         correct_answer = num1 - num2
         question = f"What is the sum of {num1} - {num2}?\n>"
     elif operation == '*':
@@ -291,7 +293,8 @@ If you want to [restart] or [quit] type that.
 # with valor, and let the resonance of victory echo          #
 # in the realms of the dugneon!                              #
 ##############################################################
-""")
+Processing ...""")
+            time.sleep(10)
             level_five_second(player)
         elif answer != correct_answer:
             print("""
