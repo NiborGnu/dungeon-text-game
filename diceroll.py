@@ -7,7 +7,9 @@ from os_interaction import restart_quit_game, end_of_game
 def dice_roll(player, monster):
     """Player battles the monster by rolling the dice."""
     print(f"""Lets [roll] the dice and kill the {monster.name},
-or to end the game [Restart]/[Quit]\n""")
+or to end the game [Restart]/[Quit]
+{player.name}'s remaining HP: {player.hp}
+""")
 
     while True:
         options = ['Roll', 'Restart/Quit']
