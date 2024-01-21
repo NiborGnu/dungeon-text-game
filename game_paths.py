@@ -6,6 +6,18 @@ from diceroll import dice_roll, dice_roll_2
 import monster
 
 
+def survived_encounter():
+    """Text to show after ended survived encounter"""
+    print("""
+############################################
+# You survived the encounter!              #
+# And finds 2 more paths at the far end... #
+############################################
+
+Now you stand before a choice again will you go [left] or [right]?
+""")
+
+
 def level_zero(player):
     """Initiates dungeon entry, welcomes player, and prompts path choice."""
     clear_screen()
@@ -39,283 +51,92 @@ def level_zero(player):
             restart_quit_game()
 
 
-def level_one_first(player):
-    """Encounter goblin, fight and survive. Choose new path"""
-    print(f"{monster.goblin.description}\n")
-    dice_roll(player, monster.goblin)
+def encounter_and_choose_path(player, current_monster, next_level_functions):
+    """Handles monster encounter and prompts for next path choice."""
+    print(f"{current_monster.description}\n")
+    dice_roll(player, current_monster)
 
     if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
+        survived_encounter()
 
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
+    path_options = ['Left', 'Right', 'Restart/Quit']
+    path_menu = TerminalMenu(path_options)
 
     while True:
         x = path_menu.show()
         if x == 0:
             clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_two_first(player)
+            print(f'\nYou choose the left path and start walking')
+            next_level_functions[0](player)
         elif x == 1:
             clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_two_second(player)
+            print(f'\nYou choose the right path and start walking')
+            next_level_functions[1](player)
         elif x == 2:
             restart_quit_game()
+
+
+def level_one_first(player):
+    """Encounter goblin, fight and survive. Choose new path"""
+    encounter_and_choose_path(
+    player, monster.goblin, [level_two_first, level_two_second]
+)
 
 
 def level_one_second(player):
     """Encounter orc, fight and survive. Choose new path"""
-    print(f"{monster.orc.description}\n")
-    dice_roll(player, monster.orc)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_two_second(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_two_third(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.orc, [level_two_second, level_two_third]
+)
 
 
 def level_two_first(player):
     """Encounter orc, fight and survive. Choose new path"""
-    print(f"{monster.orc.description}\n")
-    dice_roll(player, monster.orc)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_three_first(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_three_second(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.orc, [level_three_first, level_three_second]
+)
 
 
 def level_two_second(player):
     """Encounter murloc, fight and survive. Choose new path"""
-    print(f"{monster.murloc.description}\n")
-    dice_roll(player, monster.murloc)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_three_second(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_three_third(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.murloc, [level_three_second, level_three_third]
+)
 
 
 def level_two_third(player):
     """Encounter goblin, fight and survive. Choose new path"""
-    print(f"{monster.goblin.description}\n")
-    dice_roll(player, monster.goblin)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_three_third(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_three_fourth(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.goblin, [level_three_third, level_three_fourth]
+)
 
 
 def level_three_first(player):
     """Encounter wyvern, fight and survive. Choose new path"""
-    print(f"{monster.wyvern.description}\n")
-    dice_roll(player, monster.wyvern)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_fourth_first(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_fourth_second(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.wyvern, [level_fourth_first, level_fourth_second]
+)
 
 
 def level_three_second(player):
     """Encounter forest troll, fight and survive. Choose new path"""
-    print(f"""{monster.forest_troll.description}\n""")
-    dice_roll(player, monster.forest_troll)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_fourth_first(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_fourth_second(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.forest_troll, [level_fourth_first, level_fourth_second]
+)
 
 
 def level_three_third(player):
     """Encounter cave troll, fight and survive. Choose new path"""
-    print(f"""{monster.cave_troll.description}\n""")
-    dice_roll(player, monster.cave_troll)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_fourth_second(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_fourth_third(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.cave_troll, [level_fourth_second, level_fourth_third]
+)
 
 
 def level_three_fourth(player):
     """Encounter basilisk, fight and survive. Choose new path"""
-    print(f"{monster.basilisk.description}\n")
-    dice_roll(player, monster.basilisk)
-
-    if player.hp >= 0:
-        print(f"""
-############################################
-# You survived the encounter!              #
-# And finds 2 more paths at the far end... #
-############################################
-
-Now you stand before a choice again will you go [left] or [right]?
-""")
-    path = ['Left', 'Right', 'Restart/Quit']
-    path_menu = TerminalMenu(path)
-
-    while True:
-        x = path_menu.show()
-        if x == 0:
-            clear_screen()
-            print('\nYou choose the left path and start walking')
-            level_fourth_second(player)
-        elif x == 1:
-            clear_screen()
-            print('\nYou choose the right path and start walking')
-            level_fourth_third(player)
-        elif x == 2:
-            restart_quit_game()
+    encounter_and_choose_path(
+    player, monster.basilisk, [level_fourth_second, level_fourth_third]
+)
 
 
 def level_fourth_first(player):
