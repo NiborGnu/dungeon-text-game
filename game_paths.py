@@ -361,21 +361,44 @@ def level_fourth_first(player):
     while True:
         x = path_menu.show()
         if x == 0:
-            print("""
-##################################################
-# Upon accepting the offer, the wizard instructs #
-# you to step into a magic circle. As he utters  #
-# the incantation, the last image burned into    #
-# your memory is the wizard's sinister smile.    #
-# You've fallen victim to a cunning trick!       #
-##################################################
-
-Processing ...
-""")
-            time.sleep(10)
+            accept_offer_text = [
+                "##################################################",
+                "# Upon accepting the offer, the wizard instructs #",
+                "# you to step into a magic circle. As he utters  #",
+                "# the incantation, the last image burned into    #",
+                "# your memory is the wizard's sinister smile.    #",
+                "# You've fallen victim to a cunning trick!       #",
+                "##################################################"
+                "Processing ..."
+            ]
+            # To long text so showing 1 line at a time with 1 sec between lines
+            for line in accept_offer_text:
+                print(line)
+                time.sleep(1)
+            time.sleep(5)
             level_zero(player)
+
         elif x == 1:
-            print('\nYou choose the right path and start walking')
+            deny_offer_text = [
+                "#################################################",
+                "# Politely declining the wizard's offer, you    #",
+                "# express gratitude for the opportunity but     #",
+                "# choose to continue your journey without the   #",
+                "# aid of magical transport. The wizard nods     #",
+                "# understandingly, his eyes reflecting both     #",
+                "# wisdom and curiosity. As you turn away, the   #",
+                "# wooden floor beneath your feet creaks softly, #",
+                "# resuming its transformation into the rough    #",
+                "# and uneven terrain of the dungeon.            #",
+                "# You leave the library behind, the warm glow   #",
+                "# of knowledge fading as you venture further    #",
+                "# into the unknown depths of the dungeon.       #",
+                "#################################################"
+            ]
+            # To long text so showing 1 line at a time with 1 sec between lines
+            for line in deny_offer_text:
+                print(line)
+                time.sleep(1)
             treasure(player)
 
         elif x == 2:
@@ -536,7 +559,7 @@ face a consequential choice."""
                 "# laughter echoes in your ears, an insidious taunt  #",
                 "# from an unseen malefactor. The room blurs as the  #",
                 "# poison courses through your veins, and the        #",
-                "# once-promised victory transforms into a bitter    #",
+                "# once promised victory transforms into a bitter    #",
                 "# defeat.In the fading consciousness, you discern   #",
                 "# the haunting echo of the evil laughter, a cruel   #",
                 "# reminder of a trap intricately laid and           #",
@@ -609,31 +632,35 @@ def level_five_second(player):
 def treasure(player):
     """Discover an abundance of treasures and face the
 ultimate decision at the end of the game."""
+    texts = [
+        "###################################################",
+        "# You follow the path, and just as doubt creeps   #",
+        "# in about continuing forward, a breathtaking     #",
+        "# sight unfolds before you a treasure so abundant #",
+        "# it seems surreal. The glittering riches and     #",
+        "# artifacts strewn across the chamber leave you   #",
+        "# in awe, making you question whether such a      #",
+        "# discovery is even possible.                     #",
+        "#                                                 #",
+        "# As you marvel at the bounty, you notice an      #",
+        "# ancient portal tucked away in the corner.       #",
+        "# Its shimmering energy suggests a way out of     #",
+        "# the dungeon, providing a tempting opportunity   #",
+        "# to secure your newfound treasures and escape    #",
+        "# the perilous depths. The decision now lies      #",
+        "# with you continue exploring the riches, or      #",
+        "# step through the portal and exit the dungeon.   #",
+        "# The path to your destiny awaits.                #",
+        "###################################################",
+        "Processing ..."
+    ]
+    # To long text so showing 1 line at a time with 1 sec between lines
+    for text in texts:
+        print(text)
+        time.sleep(1)
+    time.sleep(5)
     print(f"""
-###################################################
-# You follow the path, and just as doubt creeps   #
-# in about continuing forward, a breathtaking     #
-# sight unfolds before you a treasure so abundant #
-# it seems surreal. The glittering riches and     #
-# artifacts strewn across the chamber leave you   #
-# in awe, making you question whether such a      #
-# discovery is even possible.                     #
-#                                                 #
-# As you marvel at the bounty, you notice an      #
-# ancient portal tucked away in the corner.       #
-# Its shimmering energy suggests a way out of     #
-# the dungeon, providing a tempting opportunity   #
-# to secure your newfound treasures and escape    #
-# the perilous depths. The decision now lies      #
-# with you continue exploring the riches, or      #
-# step through the portal and exit the dungeon.   #
-# The path to your destiny awaits.                #
-###################################################
-
-Processing ...
-""")
-    time.sleep(10)
-    print("""
+**{player.name} you have {player.hp}HP remaining**
 #####################################################
 #####################################################
 ###################### THE END ######################
