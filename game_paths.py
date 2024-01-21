@@ -66,11 +66,11 @@ def encounter_and_choose_path(player, current_monster, next_level_functions):
         x = path_menu.show()
         if x == 0:
             clear_screen()
-            print(f'\nYou choose the left path and start walking')
+            print('\nYou choose the left path and start walking')
             next_level_functions[0](player)
         elif x == 1:
             clear_screen()
-            print(f'\nYou choose the right path and start walking')
+            print('\nYou choose the right path and start walking')
             next_level_functions[1](player)
         elif x == 2:
             restart_quit_game()
@@ -416,7 +416,7 @@ def level_five_first(player):
     if player.hp >= 0:
         print("""
 ###############################
-# You survived the encountor! #
+# You survived the encounter! #
 ###############################""")
 
     path = ['Continue', 'Restart/Quit']
@@ -439,7 +439,7 @@ def level_five_second(player):
     if player.hp >= 0:
         print("""
 ###############################
-# You survived the encountor! #
+# You survived the encounter! #
 ###############################""")
 
     path = ['Continue', 'Restart/Quit']
