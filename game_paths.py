@@ -305,7 +305,8 @@ If you want to [restart] or [quit] type that.
 # All evidence it was there gone with it.           #
 # You shake your head and continue.                 #
 #####################################################
-""")
+Processing ...""")
+            time.sleep(10)
             level_five_first(player)
 
 
